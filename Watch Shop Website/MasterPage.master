@@ -4,21 +4,36 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Watch shop</title>
-    <link href="lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
-    <link href="./css/main.css" rel="stylesheet" />
-    </head>
+    <title></title>
+    <asp:ContentPlaceHolder id="StyleSheetsPlaceholder" runat="server">
+       
+        <link href="src/css/main.css" rel="stylesheet" />
+        </asp:ContentPlaceHolder>
+</head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a>Squeaker Sounds</a></li>
+                <li><a>Speakers</a></li>
+                <li><a>Headphones</a></li>
+                <li><a>Accesories</a></li>
+                <li><a></a></li>
+            </ul>
+        </nav>
+    </header>
 <form id="form1" runat="server">
-    <div class="container">
+    <div>
         <asp:ContentPlaceHolder id="ContentPlaceHolder" runat="server">
         
         </asp:ContentPlaceHolder>
     </div>
 </form>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+<footer></footer>
+<asp:ContentPlaceHolder id="ScriptsPlaceholder" runat="server">
+    <script src="src/js/bootstrap.min.js"></script>
+    <script src="src/js/jquery.min.js"></script>
+    <script src="src/js/popper.min.js"></script>
+</asp:ContentPlaceHolder>
 </body>
 </html>
