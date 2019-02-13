@@ -24,17 +24,29 @@
 
 #### Use Case Diagrams
 
+##### Admin use case diagram
+
+- [ ] Admin use case diagram
+
+##### Customer use case diagram
+
+- [ ] Customer use case diagram
+
 #### Sequence Diagrams
 
-#### Admin Sequence Diagrams
+##### Admin Sequence Diagrams
 
-#### Customer Sequence Diagrams
+- [ ] Add Admin sequence diagrams
+
+##### Customer Sequence Diagrams
+
+- [ ] Add Customer sequence diagrams
 
 #### Class Diagram
 
 - [ ] Add Class Diagram
 
-ERD
+#### ERD
 
 - [ ] Add ERD
 
@@ -44,8 +56,8 @@ ERD
 
 ##### Setup
 
-- [ ] Add Gulp
-- [ ] Setup Sass with Bootstrap
+- [x] Add Gulp
+- [x] Setup Sass with Bootstrap
 - [ ] Add Masterpages
 - [ ] Add Test Project
 - [ ] Add Admin Portal
@@ -120,9 +132,7 @@ ERD
 | Locations            | Admin portal                                                 |
 | Primary pathway      | 1. Admin clicks on add item button<br />2. Admin enters all necessary details<br />3. Details are validated<br />4. Admin presses add button<br />5. Added item is available at customer site |
 | Alternate pathways   | Validation fails - message is displayed to the user (depends on the input field and actual input)<br />User presses cancel/back button - user is returned to previous screen (no item is added) |
-| Exception pathway    | Database connection fails - error is
-displayed to the Admin advising of connection problem |
-
+| Exception pathway    | Database connection fails - error is displayed to the Admin advising of connection problem |
 
 
 #### Admin - Update item details
@@ -145,12 +155,10 @@ displayed to the Admin advising of connection problem |
 | Use Case Author      | Martin Kovac                                                 |
 | Actor                | Admin                                                        |
 | Locations            | Admin site                                                   |
-| Primary pathway      | 1. Admin starts application and is presented with sign in form
-2. Admin enters his login details
-3. Admin is granted access to the system |
-| Alternate pathways   | Incorrect details are entered – notification is displayed (user name or password are
-incorrect) |
+| Primary pathway      | 1. Admin goes to admin site URL<br />2. Admin is presented with sign in page<br />3. Admin enters his username and password<br />4. Admin is granted access and is redirected to dashboard |
+| Alternate pathways   | Incorrect details are entered – notification is displayed (user name or password are<br/>incorrect) |
 | Exception pathway    | Database connection fails - Error displayed to the Admin advising of connection problem |
+
 
 #### Admin - Sign Out
 
@@ -189,3 +197,14 @@ incorrect) |
 
 ### Customer - Use Case Descriptions
 
+#### Customer - Register
+
+| Use Case Name        | Register                                                     |
+| -------------------- | ------------------------------------------------------------ |
+| Use Case Description | Customer registers on the site                               |
+| Use Case Author      | Martin Kovac                                                 |
+| Locations            | Customer site                                                |
+| Actor                | Customer                                                     |
+| Primary pathway      | 1. Customer clicks on register button<br />2. Customer is presented with registration form<br />3. Customer fills up required fields<br />4. Entered values are validated<br />5. Customer is shown notification that confirmation email has been sent. |
+| Alternate pathways   | Invalid values are entered and validation fails - error message is displayed<br />Confirmation email fails and is not delivered - registration process has to be repeated |
+| Exception pathway    | Error occurs - notification is displayed to the user         |
