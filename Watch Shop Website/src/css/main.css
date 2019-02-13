@@ -7022,3 +7022,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 body {
   color: #333; }
+
+header ul {
+  list-style: none; }

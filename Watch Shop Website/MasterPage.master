@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="StyleSheetsPlaceholder" runat="server">
+       
+        <link href="src/css/main.css" rel="stylesheet" />
+        </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul  class="d-flex">
+                <li><a href="#">Squeaker Sounds</a></li>
+                <li><a href="#">Speakers</a></li>
+                <li><a href="#">Headphones</a></li>
+                <li><a href="#">Accesories</a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </nav>
+    </header>
+<form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+</form>
+<footer></footer>
+<asp:ContentPlaceHolder id="ScriptsPlaceholder" runat="server">
+    <script src="src/js/bootstrap.min.js"></script>
+    <script src="src/js/jquery.min.js"></script>
+    <script src="src/js/popper.min.js"></script>
+</asp:ContentPlaceHolder>
+</body>
+</html>
