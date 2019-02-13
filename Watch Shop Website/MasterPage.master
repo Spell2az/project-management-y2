@@ -13,12 +13,12 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a>Squeaker Sounds</a></li>
-                <li><a>Speakers</a></li>
-                <li><a>Headphones</a></li>
-                <li><a>Accesories</a></li>
-                <li><a></a></li>
+            <ul  class="d-flex">
+                <li><a href="#">Squeaker Sounds</a></li>
+                <li><a href="#">Speakers</a></li>
+                <li><a href="#">Headphones</a></li>
+                <li><a href="#">Accesories</a></li>
+                <li><a href="#"></a></li>
             </ul>
         </nav>
     </header>
