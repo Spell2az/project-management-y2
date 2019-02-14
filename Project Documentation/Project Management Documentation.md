@@ -99,24 +99,24 @@
 
 ### Customer - Event table
 
-| Subject   | Verb                        | Object  | Response                        |
-| --------- | --------------------------- | ------- | ------------------------------- |
-| Customer  | Register                    | System  | Customer is registered          |
-| Customer  | Sign In                     | System  | Customer is singed in           |
-| Customer  | Sign Out                    | System  | Customer is  signed out         |
-| Customer  | Add personal details        | System  | Personal details are added      |
-| Customer  | Edit personal details       | System  | Personal details are updated    |
-| Customer  | Add address                 | System  | Address is added                |
-| Customer  | Update address              | System  | Address is updated              |
-| Customer  | View item details           | System  | Item details are displayed      |
-| Customer  | Add item to the basket      | System  | Item is added to the basket     |
-| Customer  | Delete item from the basket | Basket  | Item is deleted from the basket |
-| Customer  | Update item quantity        | Basket  | Item quantity is updated        |
-| Customer  | Add payment details         | System  | Payment details are added       |
-| Customer  | Update payment details      | System  | Payment details are updated     |
-| Customer  | View order status           | Order   | Order details are displayed     |
-| Customerr | View order history          | Account | Order history is displayed      |
-| Customer  | Submit item review          | Item    | Review is submitted for review  |
+| Subject  | Verb                        | Object  | Response                        |
+| -------- | --------------------------- | ------- | ------------------------------- |
+| Customer | Register                    | System  | Customer is registered          |
+| Customer | Sign In                     | System  | Customer is singed in           |
+| Customer | Sign Out                    | System  | Customer is  signed out         |
+| Customer | Add personal details        | System  | Personal details are added      |
+| Customer | Edit personal details       | System  | Personal details are updated    |
+| Customer | Add address                 | System  | Address is added                |
+| Customer | Update address              | System  | Address is updated              |
+| Customer | View item details           | System  | Item details are displayed      |
+| Customer | Add item to the basket      | System  | Item is added to the basket     |
+| Customer | Delete item from the basket | Basket  | Item is deleted from the basket |
+| Customer | Update item quantity        | Basket  | Item quantity is updated        |
+| Customer | Add payment details         | System  | Payment details are added       |
+| Customer | Update payment details      | System  | Payment details are updated     |
+| Customer | View order details          | Order   | Order details are displayed     |
+| Customer | View order history          | Account | Order history is displayed      |
+| Customer | Submit item review          | Item    | Review is submitted for review  |
 
 ## Use Case Descriptions
 
