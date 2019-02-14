@@ -208,3 +208,196 @@
 | Primary pathway      | 1. Customer clicks on register button<br />2. Customer is presented with registration form<br />3. Customer fills up required fields<br />4. Entered values are validated<br />5. Customer is shown notification that confirmation email has been sent. |
 | Alternate pathways   | Invalid values are entered and validation fails - error message is displayed<br />Confirmation email fails and is not delivered - registration process has to be repeated |
 | Exception pathway    | Error occurs - notification is displayed to the user         |
+
+#### Customer - Sign in
+
+| Use Case Name        | Sign In                                                      |
+| -------------------- | ------------------------------------------------------------ |
+| Use Case Description | Customer signs in                                            |
+| Use Case Author      | Martin Kovac                                                 |
+| Actor                | Customer                                                     |
+| Locations            | Customer site                                                |
+| Primary pathway      | 1. Customer goes to customer site homepage URL<br />2. Customer clicks on sign in button<br />3. Customer is presented with sign in page<br />4. Customer enters his username and password <br />4. Customer is signed in. |
+| Alternate pathways   | Incorrect details are entered – notification is displayed (user name or password are incorrect) |
+| Exception pathway    | Database connection fails - Error displayed to the Admin advising of connection problem |
+
+#### Customer - Sign out
+
+| Use Case Name        | Sign out                                                     |
+| -------------------- | ------------------------------------------------------------ |
+| Use Case Description | Customer signs out                                           |
+| Use Case Author      | Martin Kovac                                                 |
+| Locations            | Customer site                                                |
+| Actor                | Customer                                                     |
+| Primary pathway      | 1. Customer clicks on sign out button <br />2. Notification is displayed confirming the action <br />3. Customer is redirected to homepage without access to their account and sign in button is visible |
+| Alternate pathways   | None                                                         |
+| Exception pathway    | Error occurs - notification is displayed to the user         |
+
+#### Customer - Add personal details
+
+| Use Case Name        |                                                              |
+| -------------------- | ------------------------------------------------------------ |
+| Use Case Description |                                                              |
+| Use Case Author      | Martin Kovac                                                 |
+| Locations            | Customer site                                                |
+| Actor                | Customer                                                     |
+| Primary pathway      |                                                              |
+| Alternate pathways   |                                                              |
+| Exception pathway    | Database connection fails - Error displayed to the Customer advising of connection problem |
+
+#### Customer - Edit personal details
+
+| Use Case Name        |                                                              |
+| -------------------- | ------------------------------------------------------------ |
+| Use Case Description |                                                              |
+| Use Case Author      | Martin Kovac                                                 |
+| Locations            | Customer site                                                |
+| Actor                | Customer                                                     |
+| Primary pathway      |                                                              |
+| Alternate pathways   |                                                              |
+| Exception pathway    | Database connection fails - Error displayed to the Customer advising of connection problem |
+
+#### Customer - Add address
+
+| Use Case Name        |                                                              |
+| -------------------- | ------------------------------------------------------------ |
+| Use Case Description |                                                              |
+| Use Case Author      | Martin Kovac                                                 |
+| Locations            | Customer site                                                |
+| Actor                | Customer                                                     |
+| Primary pathway      |                                                              |
+| Alternate pathways   |                                                              |
+| Exception pathway    | Database connection fails - Error displayed to the Customer advising of connection problem |
+
+#### Customer - Update address
+
+| Use Case Name        | Update address                                               |
+| -------------------- | ------------------------------------------------------------ |
+| Use Case Description | Customer updates address details                             |
+| Use Case Author      | Martin Kovac                                                 |
+| Locations            | Customer site                                                |
+| Actor                | Customer                                                     |
+| Primary pathway      | 1. Customer signs in<br />2. Customer navigates to account page<br />3. Customer selects address and presses edit<br />4. Customer enters details that should be updated<br />5. Details are validated<br />6. Customer clicks update<br />7. Details are updated and notification is displayed to the customer about successfully updating address details |
+| Alternate pathways   | Validation fails - error message is displayed to the customer<br />Customer clicks cancel/back button and is returned to the previous page (account page) |
+| Exception pathway    | Database connection fails - Error displayed to the Customer advising of connection problem |
+
+#### Customer - View item details
+
+| Use Case Name        | View item details                                            |
+| -------------------- | ------------------------------------------------------------ |
+| Use Case Description | Customer views item details                                  |
+| Use Case Author      | Martin Kovac                                                 |
+| Locations            | Customer site                                                |
+| Actor                | Customer                                                     |
+| Primary pathway      | 1. Customer clicks on desired category<br />2. Customer clicks on desired item<br />3. Customer is presented with item page displaying item details |
+| Alternate pathways   | None                                                         |
+| Exception pathway    | Database connection fails - Error displayed to the Customer advising of connection problem |
+
+#### Customer - Add item to the basket
+
+| Use Case Name        | Add item to the basket                                       |
+| -------------------- | ------------------------------------------------------------ |
+| Use Case Description | Customer add item to the basket                              |
+| Use Case Author      | Martin Kovac                                                 |
+| Locations            | Customer site                                                |
+| Actor                | Customer                                                     |
+| Primary pathway      | 1. Customer clicks on desired category<br />2. Customer clicks on desired item<br />3. Customer clicks on add to basket button<br />4. Item is added to the basket, notification is displayed confirming addition of item to the basket and basket icon is updated to indicate quantity of items in the basket. |
+| Alternate pathways   | Item are not available - notification is displayed to the user |
+| Exception pathway    | Database connection fails - Error displayed to the Customer advising of connection problem |
+
+#### Customer - Update item quantity in the basket
+
+| Use Case Name        | Update item quantity in the basket                           |
+| -------------------- | ------------------------------------------------------------ |
+| Use Case Description | Customer updates/adjusts item quantity in the basket         |
+| Use Case Author      | Martin Kovac                                                 |
+| Locations            | Customer site                                                |
+| Actor                | Customer                                                     |
+| Primary pathway      | 1. Click on the basket<br />2. Basket content is displayed<br />3. Customer can click on + and - signs buttons to increase or decrease quantity or enter number directly in the textbox<br />4. Quantity is updated when + or - buttons are clicked or textbox goes out of focus |
+| Alternate pathways   | No items in the basket - quantity cannot be adjusted unless there is at least one item in the basket |
+| Exception pathway    | Database connection fails - Error displayed to the Customer advising of connection problem |
+
+#### Customer - Delete item from the basket
+
+| Use Case Name        |                                                              |
+| -------------------- | ------------------------------------------------------------ |
+| Use Case Description |                                                              |
+| Use Case Author      | Martin Kovac                                                 |
+| Locations            | Customer site                                                |
+| Actor                | Customer                                                     |
+| Primary pathway      |                                                              |
+| Alternate pathways   |                                                              |
+| Exception pathway    | Database connection fails - Error displayed to the Customer advising of connection problem |
+
+#### Customer - Add payment details
+
+| Use Case Name        |                                                              |
+| -------------------- | ------------------------------------------------------------ |
+| Use Case Description |                                                              |
+| Use Case Author      | Martin Kovac                                                 |
+| Locations            | Customer site                                                |
+| Actor                | Customer                                                     |
+| Primary pathway      |                                                              |
+| Alternate pathways   |                                                              |
+| Exception pathway    | Database connection fails - Error displayed to the Customer advising of connection problem |
+
+#### Customer - Update payment details
+
+| Use Case Name        |                                                              |
+| -------------------- | ------------------------------------------------------------ |
+| Use Case Description |                                                              |
+| Use Case Author      | Martin Kovac                                                 |
+| Locations            | Customer site                                                |
+| Actor                | Customer                                                     |
+| Primary pathway      |                                                              |
+| Alternate pathways   |                                                              |
+| Exception pathway    | Database connection fails - Error displayed to the Customer advising of connection problem |
+
+#### Customer - Delete payment details
+
+| Use Case Name        |                                                              |
+| -------------------- | ------------------------------------------------------------ |
+| Use Case Description |                                                              |
+| Use Case Author      | Martin Kovac                                                 |
+| Locations            | Customer site                                                |
+| Actor                | Customer                                                     |
+| Primary pathway      |                                                              |
+| Alternate pathways   |                                                              |
+| Exception pathway    | Database connection fails - Error displayed to the Customer advising of connection problem |
+
+#### Customer - View order details
+
+| Use Case Name        | View order details                                           |
+| -------------------- | ------------------------------------------------------------ |
+| Use Case Description | Customer selects and views order details                     |
+| Use Case Author      | Martin Kovac                                                 |
+| Locations            | Customer site                                                |
+| Actor                | Customer                                                     |
+| Primary pathway      | 1. Customer signs in<br />2. Customer navigates to account page<br />3. Customer clicks on orders<br />4. Orders are listed in chronological order<br />5. Customer clicks on the desired order<br />6. Customer is presented with single order page with order details displayed |
+| Alternate pathways   | None                                                         |
+| Exception pathway    | Database connection fails - Error displayed to the Customer advising of connection problem |
+
+#### Customer - View order history
+
+| Use Case Name        | View order history                                           |
+| -------------------- | ------------------------------------------------------------ |
+| Use Case Description | Customer view their order history                            |
+| Use Case Author      | Martin Kovac                                                 |
+| Locations            | Customer site                                                |
+| Actor                | Customer                                                     |
+| Primary pathway      | 1. Customer signs in<br />2. Customer navigates to account page<br />3. Customer clicks on orders<br />4. Customer is presented with their order history - list of previous orders in chronological order |
+| Alternate pathways   | If there are no orders - page is empty with message no orders placed |
+| Exception pathway    | Database connection fails - Error displayed to the Customer advising of connection problem |
+
+#### Customer - Submit item review
+
+| Use Case Name        |                                                              |
+| -------------------- | ------------------------------------------------------------ |
+| Use Case Description |                                                              |
+| Use Case Author      | Martin Kovac                                                 |
+| Locations            | Customer site                                                |
+| Actor                | Customer                                                     |
+| Primary pathway      |                                                              |
+| Alternate pathways   |                                                              |
+| Exception pathway    | Database connection fails - Error displayed to the Customer advising of connection problem |
+
