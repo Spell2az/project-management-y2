@@ -12,13 +12,19 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul  class="d-flex">
+        <nav class="d-flex justify-content-between px-3 py-4">
+            <ul class="nav-logo">
                 <li><a href="#">Squeaker Sounds</a></li>
+            </ul>
+            <ul  class="d-flex nav-links">
                 <li><a href="#">Speakers</a></li>
                 <li><a href="#">Headphones</a></li>
                 <li><a href="#">Accesories</a></li>
                 <li><a href="#"></a></li>
+            </ul>
+            <ul class="d-flex nav-account">
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">Basket</a></li>
             </ul>
         </nav>
     </header>
@@ -31,9 +37,9 @@
 </form>
 <footer></footer>
 <asp:ContentPlaceHolder id="ScriptsPlaceholder" runat="server">
-    <script src="src/js/bootstrap.min.js"></script>
     <script src="src/js/jquery.min.js"></script>
     <script src="src/js/popper.min.js"></script>
+    <script src="src/js/bootstrap.min.js"></script>
 </asp:ContentPlaceHolder>
 </body>
 </html>

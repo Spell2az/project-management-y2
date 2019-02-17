@@ -3,8 +3,9 @@
 @import 'bootstrap';
 
 body {
-    color: #333;
+    color: $dark;
 }
 
 @import "components/header";
+@import "components/footer";
    
