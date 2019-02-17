@@ -1,45 +1,59 @@
-﻿<%@ Master Language="C#" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage2" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head runat="server">
     <title></title>
-    <asp:ContentPlaceHolder id="StyleSheetsPlaceholder" runat="server">
-       
-        <link href="src/css/main.css" rel="stylesheet" />
-        </asp:ContentPlaceHolder>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link href="src/css/main.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <nav class="d-flex justify-content-between px-3 py-4">
-            <ul class="nav-logo">
-                <li><a href="#">Squeaker Sounds</a></li>
-            </ul>
-            <ul  class="d-flex nav-links">
-                <li><a href="#">Speakers</a></li>
-                <li><a href="#">Headphones</a></li>
-                <li><a href="#">Accesories</a></li>
-                <li><a href="#"></a></li>
-            </ul>
-            <ul class="d-flex nav-account">
-                <li><a href="#">Sign In</a></li>
-                <li><a href="#">Basket</a></li>
-            </ul>
-        </nav>
-    </header>
-<form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder id="ContentPlaceHolder" runat="server">
+<header>
+    <nav class="d-flex px-3">
+        <ul class="nav-logo">
+            <li>
+                <asp:HyperLink ID="HyperLink1" NavigateUrl="Default.aspx" runat="server">Squeaker Sounds</asp:HyperLink><a href="#"></a></li>
+        </ul>
+        <ul class="d-flex  justify-content-center nav-links">
+            <li>
+                <asp:HyperLink NavigateUrl="CategoryPage.aspx?category=Speakers" ID="HyperLink2" runat="server">Speakers</asp:HyperLink></li>
+            <li>
+                <asp:HyperLink NavigateUrl="CategoryPage.aspx?category=Headphones" ID="HyperLink3" runat="server">Headphones</asp:HyperLink></li>
+            <li>
+                <asp:HyperLink NavigateUrl="CategoryPage.aspx?category=Accessories" ID="HyperLink4" runat="server">Accessories</asp:HyperLink></li>
+
+        </ul>
+        <ul class="d-flex nav-account justify-content-end">
+            <li class="account-icon"><a href="#" ><i class="material-icons">
+                account_circle
+            </i></a>
+               
+                <div class="nav-account-dropdown">
+                    <asp:HyperLink CssClass="p-3" ID="HyperLink6" NavigateUrl="SignInPage.aspx" runat="server">Sign In</asp:HyperLink>
+                    <asp:HyperLink  CssClass="p-3" ID="HyperLink7" NavigateUrl="RegisterPage.aspx" runat="server">Register</asp:HyperLink>
+                </div>
+            </li>
+            <li>
+                <asp:HyperLink ID="HyperLink5" NavigateUrl="BasketPage.aspx" runat="server"><i class="material-icons">
+                    shopping_cart
+                </i></asp:HyperLink></li>
+        </ul>
+    </nav>
+</header>
+    <form id="form1" runat="server">
+    <div class="container">
+        <asp:ContentPlaceHolder id="MainContentPlaceholder" runat="server">
         
         </asp:ContentPlaceHolder>
     </div>
 </form>
 <footer></footer>
-<asp:ContentPlaceHolder id="ScriptsPlaceholder" runat="server">
-    <script src="src/js/jquery.min.js"></script>
-    <script src="src/js/popper.min.js"></script>
-    <script src="src/js/bootstrap.min.js"></script>
-</asp:ContentPlaceHolder>
+<script type="text/javascript" src="src/js/jquery.min.js"></script>
+<%--<script type="text/javascript" src="src/js/popper.min.js"></script>--%>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="src/js/bootstrap.min.js"></script>
 </body>
 </html>
