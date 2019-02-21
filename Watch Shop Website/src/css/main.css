@@ -7076,3 +7076,14 @@ header {
   opacity: 1;
   transform: translateY(66px);
   transition: all 0.2s ease; }
+
+.basket-quantity {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  font-weight: bold;
+  border-radius: 50%;
+  color: #333; }
+
+header i {
+  font-size: 2.2rem !important; }
