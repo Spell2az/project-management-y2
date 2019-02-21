@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Inventory;
+using Utilities;
 
 public partial class Default2 : System.Web.UI.Page
 {
@@ -14,31 +16,21 @@ public partial class Default2 : System.Web.UI.Page
     {
         category = Request.QueryString["category"];
         CategoryHeading.Text = category;
-        dt = SeeDataTable();
-        Repeater1.DataSource = dt;
+
+        var items = GetItems();
+        Session["Items"] = items;
+        var categoryItems = items.Where(i => i.Category == (Categories)Enum.Parse(typeof(Categories), category)).ToList();
+        dt = DataTableUtils.GetItemDataTable(categoryItems);
+        Repeater1.DataSource =
+            dt.AsEnumerable().Where(r => r.Field<string>("Category").Equals(category)).CopyToDataTable();
         Repeater1.DataBind();
     }
 
-    private DataTable SeeDataTable()
+    private List<Item> GetItems()
     {
-        var dt = new DataTable();
-        dt.Columns.Add("productId");
-        dt.Columns.Add("name");
-        dt.Columns.Add("image");
-        dt.Columns.Add("category");
+        var items = new Items();
+        return items.ItemList;
 
-        var idList = new List<int>() {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        var nameList = new List<string>(){ "logitech", "other", "speaker", "cat", "dog", "hifi", "aeroplane", "london", "leicester", "banana"};
-        for (int i = 0; i < idList.Count; i++)
-        {
-            var row = dt.NewRow();
-            row["productId"] = idList[i];
-            row["name"] = nameList[i]  + " " + category;
-            row["image"] = "bluetooth-speakers.png";
-            row["category"] = "speakers";
-            dt.Rows.Add(row);
-        }
-       
-        return dt;
     }
+   
 }
