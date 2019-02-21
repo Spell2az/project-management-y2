@@ -38,8 +38,8 @@
             <li>
                 <asp:HyperLink ID="HyperLink5" NavigateUrl="BasketPage.aspx" runat="server"><i class="material-icons">
                     shopping_cart
-                </i></asp:HyperLink>
-                <asp:Label CssClass="basket-quantity" ID="lblBasketQuantity" runat="server"></asp:Label>
+                </i> <asp:Label CssClass="basket-quantity" ID="lblBasketQuantity" runat="server"></asp:Label></asp:HyperLink>
+               
             </li>
         </ul>
     </nav>
