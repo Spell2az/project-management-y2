@@ -11,8 +11,8 @@ namespace Sandbox
     {
         static void Main(string[] args)
         {
-            var generator = new ItemGenerator();
-         
+           // var generator = new ItemGenerator();
+            var generator = new ReviewGenerator();
             Console.WriteLine(generator.GetJson());
             Console.ReadKey();
         }
