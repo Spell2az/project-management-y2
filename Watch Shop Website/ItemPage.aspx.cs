@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Inventory;
+using Sandbox;
+using Utilities;
 
 public partial class Default2 : System.Web.UI.Page
 {
@@ -22,7 +24,9 @@ public partial class Default2 : System.Web.UI.Page
 
         var items = (List<Item>)Session["Items"];
         var item = items.Single(i => i.Id == itemId);
-
+        var reviews = new Reviews().GetReviewForItemId(itemId);
+        lblRating.Text = "Rating: 5.0 / " + reviews.Average(r => r.Rating);
+        SeedReviews(reviews);
         DisplayItemDetails(item);
     }
 
@@ -47,6 +51,12 @@ public partial class Default2 : System.Web.UI.Page
         ddlQuantity.Items.AddRange(ddlItems);
     }
 
+    private void SeedReviews(List<Review> reviews)
+    {
+        ReviewRepeater.DataSource = DataTableUtils.GetReviewDataTable(reviews);
+        ReviewRepeater.DataBind();
+    }
+
     protected void AddItemToBasket(object sender, EventArgs e)
     {
         var master =  this.Master;
@@ -58,6 +68,5 @@ public partial class Default2 : System.Web.UI.Page
             var basketControl = master.FindControl("lblBasketQuantity") as Label;
             basketControl.Text = basket.GetItemQuantity.ToString();
         }
-        
     }
 }
