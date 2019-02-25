@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using Inventory;
+using Sandbox;
 
 namespace Utilities
 {
@@ -56,7 +57,27 @@ namespace Utilities
             }
 
             return dt;
+        }
 
+        public static DataTable GetReviewDataTable(IEnumerable<Review> reviews)
+        {
+            var dt = new DataTable();
+            dt.Columns.Add("Id");
+            dt.Columns.Add("Rating");
+            dt.Columns.Add("ReviewText");
+            dt.Columns.Add("Reviewer");
+
+            foreach (Review review in reviews)
+            {
+                var row = dt.NewRow();
+
+                row["Id"] = review.Id;
+                row["Rating"] = review.Rating;
+                row["ReviewText"] = review.ReviewText;
+                row["Reviewer"] = review.Reviewer;
+                dt.Rows.Add(row);
+            }
+            return dt;
         }
     }
 }
