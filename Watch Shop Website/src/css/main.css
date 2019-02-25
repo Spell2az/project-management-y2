@@ -7087,3 +7087,14 @@ header {
 
 header i {
   font-size: 2.2rem !important; }
+
+.product-tile {
+  text-align: center;
+  color: #333; }
+  .product-tile img {
+    object-fit: cover;
+    width: 100%;
+    padding: 2rem; }
+  .product-tile:hover {
+    text-decoration: none;
+    color: #333; }
