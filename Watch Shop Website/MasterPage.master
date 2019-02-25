@@ -26,7 +26,10 @@
 
         </ul>
         <ul class="d-flex nav-account justify-content-end">
-            <li class="account-icon"><a href="#" ><i class="material-icons">
+            <li>
+                <a href="SignInPage.aspx">Sign Up / Sign In</a>
+            </li>
+           <%-- <li class="account-icon"><a href="#" ><i class="material-icons">
                 account_circle
             </i></a>
                
@@ -34,7 +37,7 @@
                     <asp:HyperLink CssClass="p-3" ID="HyperLink6" NavigateUrl="SignInPage.aspx" runat="server">Sign In</asp:HyperLink>
                     <asp:HyperLink  CssClass="p-3" ID="HyperLink7" NavigateUrl="RegisterPage.aspx" runat="server">Register</asp:HyperLink>
                 </div>
-            </li>
+            </li>--%>
             <li>
                 <asp:HyperLink ID="HyperLink5" NavigateUrl="BasketPage.aspx" runat="server"><i class="material-icons">
                     shopping_cart
