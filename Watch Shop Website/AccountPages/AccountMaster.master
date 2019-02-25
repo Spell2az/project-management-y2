@@ -1,22 +1,17 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="AccountMaster.master.cs" Inherits="Account" %>
 
-<%--<asp:Content ID="Content1" ContentPlaceHolderID="StyleSheetsPlaceholder" Runat="Server">
-    <asp:ContentPlaceHolder ID="head" runat="server"> 
-    </asp:ContentPlaceHolder>
-</asp:Content>--%>
-
 
 <asp:Content ContentPlaceHolderID="MainContentPlaceholder" runat="server">
-    <div class="row">
+    <div class="row mt-5">
         <div class="col-4">
-            <ul>
-                <li>
+            <ul class="list-group">
+                <li class="<%:Page.Title=="Account Information"?"list-group-item active":"list-group-item"%>">
                     <asp:HyperLink ID="HyperLink1" NavigateUrl="AccountInfo.aspx" runat="server">Account</asp:HyperLink></li>
-                <li>
+                <li class="<%:Page.Title=="Orders"?"list-group-item active":"list-group-item"%>">
                     <asp:HyperLink ID="HyperLink4" NavigateUrl="Orders.aspx" runat="server">Orders</asp:HyperLink></li>
-                <li>
+                <li class="<%:Page.Title=="Payment Information"?"list-group-item active":"list-group-item"%>">
                     <asp:HyperLink ID="HyperLink2" NavigateUrl="PaymentInfo.aspx" runat="server">Payment Info</asp:HyperLink></li>
-                <li>
+                <li class="<%:Page.Title=="Personal Information"?"list-group-item active":"list-group-item"%>">
                     <asp:HyperLink ID="HyperLink3" NavigateUrl="PersonalInfo.aspx" runat="server">Personal Information</asp:HyperLink></li>
             </ul>
         </div>
@@ -29,6 +24,4 @@
             </asp:Content>
    
 
-<%--<asp:Content ID="Content3" ContentPlaceHolderID="ScriptsPlaceholder" Runat="Server">
-</asp:Content>--%>
 

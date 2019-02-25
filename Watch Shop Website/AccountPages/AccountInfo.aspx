@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Account Info" Language="C#" MasterPageFile="~/AccountPages/AccountMaster.master" %>
+﻿<%@ Page Title="Account Information" Language="C#" MasterPageFile="~/AccountPages/AccountMaster.master" %>
 
 
 <asp:Content id="AccountInfoContent" ContentPlaceHolderID="AccountPagePlaceholder" runat="server">
