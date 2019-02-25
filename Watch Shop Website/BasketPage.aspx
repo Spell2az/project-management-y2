@@ -32,12 +32,12 @@
             </p>
 
         </div>
-        
-    </asp:Panel>
-    <div class="row">
+           <div class="row">
         <asp:LinkButton ID="LinkButton1" PostBackUrl="~/AccountPages/CheckoutPage.aspx" CssClass="btn btn-dark" runat="server" Text="Proceed to Checkout" />
         <asp:Button ID="btnEmptyBasket" OnClick="EmptyBasketHandler" CssClass="btn btn-dark" runat="server" Text="Empty Basket" />
     </div>
+    </asp:Panel>
+ 
     <asp:Panel Visible="True" ID="EmptyBasketPanel" CssClass="row  pt-5" runat="server">
         <h3>Your basket is empty
         </h3>
