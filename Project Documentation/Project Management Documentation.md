@@ -10,13 +10,15 @@
 
 #### Event Tables
 
-- [ ] Event Table Admin
-- [ ] Event Table Customer
+- [x] Event Table Admin
+- [x] Event Table Customer
+- [ ] Event Table Employee
 
 #### Use Case Descriptions
 
-- [ ] Use Case Descriptions Customer
-- [ ] Use Case Descriptions Admin
+- [x] Use Case Descriptions Customer
+- [x] Use Case Descriptions Admin
+- [ ] Use Case Descriptions Employee
 
 #### Test Plan
 
@@ -101,7 +103,7 @@
 
 | Subject  | Verb                        | Object  | Response                        |
 | -------- | --------------------------- | ------- | ------------------------------- |
-| Customer | Register                    | System  | Customer is registered          |
+| Customer | Sign Up                     | System  | Customer is registered          |
 | Customer | Sign In                     | System  | Customer is singed in           |
 | Customer | Sign Out                    | System  | Customer is  signed out         |
 | Customer | Add personal details        | System  | Personal details are added      |
@@ -199,7 +201,7 @@
 
 #### Customer - Register
 
-| Use Case Name        | Register                                                     |
+| Use Case Name        | Sign Up                                                      |
 | -------------------- | ------------------------------------------------------------ |
 | Use Case Description | Customer registers on the site                               |
 | Use Case Author      | Martin Kovac                                                 |
@@ -400,4 +402,3 @@
 | Primary pathway      |                                                              |
 | Alternate pathways   |                                                              |
 | Exception pathway    | Database connection fails - Error displayed to the Customer advising of connection problem |
-
