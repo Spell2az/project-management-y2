@@ -107,7 +107,7 @@
 
 | Subject  | Verb                        | Object  | Response                        |
 | -------- | --------------------------- | ------- | ------------------------------- |
-| Customer | Register                    | System  | Customer is registered          |
+| Customer | Sign Up                     | System  | Customer is registered          |
 | Customer | Sign In                     | System  | Customer is singed in           |
 | Customer | Sign Out                    | System  | Customer is  signed out         |
 | Customer | Add personal details        | System  | Personal details are added      |
@@ -219,7 +219,7 @@
 
 #### Customer - Register
 
-| Use Case Name        | Register                                                     |
+| Use Case Name        | Sign Up                                                      |
 | -------------------- | ------------------------------------------------------------ |
 | Use Case Description | Customer registers on the site                               |
 | Use Case Author      | Martin Kovac                                                 |
