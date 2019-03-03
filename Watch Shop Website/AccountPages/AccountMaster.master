@@ -2,20 +2,24 @@
 
 
 <asp:Content ContentPlaceHolderID="MainContentPlaceholder" runat="server">
-    <div class="row mt-5">
-        <div class="col-4">
-            <ul class="list-group">
-                <li class="<%:Page.Title=="Account Information"?"list-group-item active":"list-group-item"%>">
-                    <asp:HyperLink ID="HyperLink1" NavigateUrl="AccountInfo.aspx" runat="server">Account</asp:HyperLink></li>
-                <li class="<%:Page.Title=="Orders"?"list-group-item active":"list-group-item"%>">
-                    <asp:HyperLink ID="HyperLink4" NavigateUrl="Orders.aspx" runat="server">Orders</asp:HyperLink></li>
-                <li class="<%:Page.Title=="Payment Information"?"list-group-item active":"list-group-item"%>">
-                    <asp:HyperLink ID="HyperLink2" NavigateUrl="PaymentInfo.aspx" runat="server">Payment Info</asp:HyperLink></li>
-                <li class="<%:Page.Title=="Personal Information"?"list-group-item active":"list-group-item"%>">
-                    <asp:HyperLink ID="HyperLink3" NavigateUrl="PersonalInfo.aspx" runat="server">Personal Information</asp:HyperLink></li>
-            </ul>
+    <div class="row mt-5 pt-5">
+        <div class="col-3">
+            <div class="list-group">
+                <a href="LoginAndSecurity.aspx" class="<%:Page.Title=="Login and Security"?"list-group-item active":"list-group-item"%>">
+                    Login & security
+                </a>
+                <a href="Orders.aspx" class="<%:Page.Title=="Orders"?"list-group-item active":"list-group-item"%>">
+                    Your Orders
+                </a>
+                <a href="YourAddresses.aspx" class="<%:Page.Title=="Your Addresses"?"list-group-item active":"list-group-item"%>">
+                    Your Addresses
+                </a>
+                <a href="PaymentInfo.aspx" class="<%:Page.Title=="Payment Information"?"list-group-item active":"list-group-item"%>">
+                    Payment Options
+                </a>
+            </div>
         </div>
-        <div class="col-8">
+        <div class="col-9">
             <asp:ContentPlaceHolder ID="AccountPagePlaceholder" runat="server">
             </asp:ContentPlaceHolder>
         </div>
