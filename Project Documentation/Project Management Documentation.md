@@ -421,3 +421,114 @@
 | Alternate pathways   |                                                              |
 | Exception pathway    | Database connection fails - Error displayed to the Customer advising of connection problem |
 
+### Employee Use Case Descriptions
+
+#### Employee - Sign In 
+
+| Use Case Name        |                       |
+| -------------------- | --------------------- |
+| Use Case Description |                       |
+| Use Case Author      | Martin Kovac          |
+| Locations            | Warehouse application |
+| Actor                | Employee              |
+| Primary pathway      |                       |
+| Alternate pathways   |                       |
+| Exception pathway    |                       |
+
+#### Employee - Sign Out
+
+| Use Case Name        |                       |
+| -------------------- | --------------------- |
+| Use Case Description |                       |
+| Use Case Author      | Martin Kovac          |
+| Locations            | Warehouse application |
+| Actor                | Employee              |
+| Primary pathway      |                       |
+| Alternate pathways   |                       |
+| Exception pathway    |                       |
+
+#### Employee - Receive item
+
+| Use Case Name        |                       |
+| -------------------- | --------------------- |
+| Use Case Description |                       |
+| Use Case Author      | Martin Kovac          |
+| Locations            | Warehouse application |
+| Actor                | Employee              |
+| Primary pathway      |                       |
+| Alternate pathways   |                       |
+| Exception pathway    |                       |
+
+#### Employee - Stow Item
+
+| Use Case Name        |                       |
+| -------------------- | --------------------- |
+| Use Case Description |                       |
+| Use Case Author      | Martin Kovac          |
+| Locations            | Warehouse application |
+| Actor                | Employee              |
+| Primary pathway      |                       |
+| Alternate pathways   |                       |
+| Exception pathway    |                       |
+
+#### Employee - Pick customer order
+
+| Use Case Name        |                       |
+| -------------------- | --------------------- |
+| Use Case Description |                       |
+| Use Case Author      | Martin Kovac          |
+| Locations            | Warehouse application |
+| Actor                | Employee              |
+| Primary pathway      |                       |
+| Alternate pathways   |                       |
+| Exception pathway    |                       |
+
+#### Employee - Drop picked order into a pack location
+
+| Use Case Name        |                       |
+| -------------------- | --------------------- |
+| Use Case Description |                       |
+| Use Case Author      | Martin Kovac          |
+| Locations            | Warehouse application |
+| Actor                | Employee              |
+| Primary pathway      |                       |
+| Alternate pathways   |                       |
+| Exception pathway    |                       |
+
+#### Employee - Pack order
+
+| Use Case Name        |                       |
+| -------------------- | --------------------- |
+| Use Case Description |                       |
+| Use Case Author      | Martin Kovac          |
+| Locations            | Warehouse application |
+| Actor                | Employee              |
+| Primary pathway      |                       |
+| Alternate pathways   |                       |
+| Exception pathway    |                       |
+
+#### Employee - Drop packed order into shipping location
+
+| Use Case Name        |                       |
+| -------------------- | --------------------- |
+| Use Case Description |                       |
+| Use Case Author      | Martin Kovac          |
+| Locations            | Warehouse application |
+| Actor                | Employee              |
+| Primary pathway      |                       |
+| Alternate pathways   |                       |
+| Exception pathway    |                       |
+
+#### Employee - Dispatch order
+
+
+
+| Use Case Name        |                       |
+| -------------------- | --------------------- |
+| Use Case Description |                       |
+| Use Case Author      | Martin Kovac          |
+| Locations            | Warehouse application |
+| Actor                | Employee              |
+| Primary pathway      |                       |
+| Alternate pathways   |                       |
+| Exception pathway    |                       |
