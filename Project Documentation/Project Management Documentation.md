@@ -12,11 +12,13 @@
 
 - [ ] Event Table Admin
 - [ ] Event Table Customer
+- [ ] Event Table Employee
 
 #### Use Case Descriptions
 
 - [ ] Use Case Descriptions Customer
 - [ ] Use Case Descriptions Admin
+- [ ] Use Case Description Employee
 
 #### Test Plan
 
@@ -31,6 +33,10 @@
 ##### Customer use case diagram
 
 - [ ] Customer use case diagram
+
+##### Employee use case diagram
+
+- [ ] Employee use case diagram
 
 #### Sequence Diagrams
 
@@ -117,6 +123,20 @@
 | Customer | View order details          | Order   | Order details are displayed     |
 | Customer | View order history          | Account | Order history is displayed      |
 | Customer | Submit item review          | Item    | Review is submitted for review  |
+
+### Employee - Event table
+
+| Subject  | Verb                        | Object   | Response                                    |
+| -------- | --------------------------- | -------- | ------------------------------------------- |
+| Employee | Sign In                     | System   | Employee is Singed In.                      |
+| Employee | Sing Out                    | System   | Employee is Signed Out.                     |
+| Employee | Receive                     | Item     | Item is received into receive location.     |
+| Employee | Stow                        | Item     | Item is stowed into a storage location.     |
+| Employee | Pick                        | Order    | Order is picked from a storage location.    |
+| Employee | Drop into packing location  | Order    | Picked orders are added to a pack location. |
+| Employee | Pack                        | Order    | Order is packed and shipment is created.    |
+| Employee | Drop into shipping location | Shipment | Shipment is added to a shipping location.   |
+| Employee | Dispatch shipment           | Shipment | Shipment is dispatched.                     |
 
 ## Use Case Descriptions
 
