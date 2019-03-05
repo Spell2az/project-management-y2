@@ -20,5 +20,10 @@ namespace WarehouseApp
         {
             this.DialogResult = DialogResult.OK;
         }
+
+        private void LoginForm_Load(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

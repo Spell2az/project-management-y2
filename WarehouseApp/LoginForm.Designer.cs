@@ -123,7 +123,9 @@
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnSignIn);
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
