@@ -14,7 +14,15 @@ namespace WarehouseApp
 {
     public partial class MainForm : Form
     {
-        private ReceiveForm receiveForm;
+        public static void ShowPanel(Form form)
+        {
+            var findResult = form.MdiParent.Controls.Find("panelMainControls", true);
+            if (findResult.Length == 1)
+            {
+                findResult[0].Show();
+            }
+        }
+
         public Panel ControlPanel;
         public MainForm()
         {
@@ -28,7 +36,7 @@ namespace WarehouseApp
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            ControlPanel = mainControlsPanel;
+            ControlPanel = panelMainControls;
         }
 
         private void btnSignOut_Click(object sender, EventArgs e)
@@ -36,14 +44,18 @@ namespace WarehouseApp
             Application.Exit();
         }
 
-        private void btnReceive_Click(object sender, EventArgs e)
-        {
+       
 
-            PickForm pickForm = new PickForm();
-            pickForm.MdiParent = this;
-            pickForm.Show();
-            pickForm.BringToFront();
-            mainControlsPanel.Hide();
+        private void ShowTaskForm<T>() where T: Form, new()
+        {
+            var form = new T()
+            {
+                MdiParent = this
+            };
+            form.Show();
+            form.WindowState = FormWindowState.Maximized;
+            form.BringToFront();
+            panelMainControls.Hide();
         }
 
         private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -51,20 +63,33 @@ namespace WarehouseApp
             Application.Exit();
         }
 
-        private void receiveToolStripMenuItem_Click(object sender, EventArgs e)
+        #region Task Form Button Handlers
+
+        private void btnReceive_Click(object sender, EventArgs e)
         {
-            receiveForm = new ReceiveForm();
-          
-            receiveForm.Show();
+            ShowTaskForm<ReceiveForm>();
+        }
+        private void btnStow_Click(object sender, EventArgs e)
+        {
+            ShowTaskForm<StowForm>();
         }
 
-        private void pickToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnPick_Click(object sender, EventArgs e)
         {
+            ShowTaskForm<PickForm>();
         }
 
-        private void pcikToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnPack_Click(object sender, EventArgs e)
         {
-
+            ShowTaskForm<PackForm>();
         }
+
+        private void btnShip_Click(object sender, EventArgs e)
+        {
+            ShowTaskForm<ShipForm>();
+        }
+
+        #endregion
+        
     }
 }

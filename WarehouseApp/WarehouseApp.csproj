@@ -61,6 +61,12 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackForm.Designer.cs">
+      <DependentUpon>PackForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PickForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,18 @@
     </Compile>
     <Compile Include="ReceiveForm.Designer.cs">
       <DependentUpon>ReceiveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipForm.Designer.cs">
+      <DependentUpon>ShipForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StowForm.Designer.cs">
+      <DependentUpon>StowForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

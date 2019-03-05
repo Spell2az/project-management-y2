@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin.Controls;
 
 namespace WarehouseApp
 {
-    public partial class PickForm : Form
+    public partial class PickForm : MaterialForm
     {
         public PickForm()
         {
@@ -20,8 +21,8 @@ namespace WarehouseApp
         protected override void OnClosed(EventArgs e)
         {
             base.OnClosed(e);
-            var panel = this.MdiParent.Controls.Find("mainControlsPanel", true);
-            panel[0].Visible = true;
+
+            MainForm.ShowPanel(this);
         }
     }
 }

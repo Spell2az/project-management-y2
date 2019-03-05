@@ -37,8 +37,8 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnSignOut = new MaterialSkin.Controls.MaterialFlatButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.mainControlsPanel = new System.Windows.Forms.Panel();
-            this.mainControlsPanel.SuspendLayout();
+            this.panelMainControls = new System.Windows.Forms.Panel();
+            this.panelMainControls.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnReceive
@@ -48,7 +48,7 @@
             this.btnReceive.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnReceive.Depth = 0;
             this.btnReceive.Icon = null;
-            this.btnReceive.Location = new System.Drawing.Point(337, 133);
+            this.btnReceive.Location = new System.Drawing.Point(333, 87);
             this.btnReceive.MinimumSize = new System.Drawing.Size(200, 0);
             this.btnReceive.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnReceive.Name = "btnReceive";
@@ -66,7 +66,7 @@
             this.btnStow.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnStow.Depth = 0;
             this.btnStow.Icon = null;
-            this.btnStow.Location = new System.Drawing.Point(337, 197);
+            this.btnStow.Location = new System.Drawing.Point(333, 151);
             this.btnStow.MinimumSize = new System.Drawing.Size(200, 0);
             this.btnStow.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnStow.Name = "btnStow";
@@ -75,6 +75,7 @@
             this.btnStow.TabIndex = 1;
             this.btnStow.Text = "Stow";
             this.btnStow.UseVisualStyleBackColor = true;
+            this.btnStow.Click += new System.EventHandler(this.btnStow_Click);
             // 
             // btnPick
             // 
@@ -83,7 +84,7 @@
             this.btnPick.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnPick.Depth = 0;
             this.btnPick.Icon = null;
-            this.btnPick.Location = new System.Drawing.Point(337, 262);
+            this.btnPick.Location = new System.Drawing.Point(333, 216);
             this.btnPick.MinimumSize = new System.Drawing.Size(200, 0);
             this.btnPick.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnPick.Name = "btnPick";
@@ -92,6 +93,7 @@
             this.btnPick.TabIndex = 2;
             this.btnPick.Text = "Pick";
             this.btnPick.UseVisualStyleBackColor = true;
+            this.btnPick.Click += new System.EventHandler(this.btnPick_Click);
             // 
             // btnPack
             // 
@@ -100,7 +102,7 @@
             this.btnPack.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnPack.Depth = 0;
             this.btnPack.Icon = null;
-            this.btnPack.Location = new System.Drawing.Point(337, 322);
+            this.btnPack.Location = new System.Drawing.Point(333, 276);
             this.btnPack.MinimumSize = new System.Drawing.Size(200, 0);
             this.btnPack.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnPack.Name = "btnPack";
@@ -109,6 +111,7 @@
             this.btnPack.TabIndex = 3;
             this.btnPack.Text = "Pack";
             this.btnPack.UseVisualStyleBackColor = true;
+            this.btnPack.Click += new System.EventHandler(this.btnPack_Click);
             // 
             // btnShip
             // 
@@ -117,7 +120,7 @@
             this.btnShip.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnShip.Depth = 0;
             this.btnShip.Icon = null;
-            this.btnShip.Location = new System.Drawing.Point(337, 384);
+            this.btnShip.Location = new System.Drawing.Point(333, 338);
             this.btnShip.MinimumSize = new System.Drawing.Size(200, 0);
             this.btnShip.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnShip.Name = "btnShip";
@@ -126,6 +129,7 @@
             this.btnShip.TabIndex = 4;
             this.btnShip.Text = "Ship";
             this.btnShip.UseVisualStyleBackColor = true;
+            this.btnShip.Click += new System.EventHandler(this.btnShip_Click);
             // 
             // contextMenuStrip1
             // 
@@ -139,7 +143,7 @@
             this.btnSignOut.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSignOut.Depth = 0;
             this.btnSignOut.Icon = null;
-            this.btnSignOut.Location = new System.Drawing.Point(380, 44);
+            this.btnSignOut.Location = new System.Drawing.Point(771, 18);
             this.btnSignOut.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSignOut.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSignOut.Name = "btnSignOut";
@@ -158,35 +162,36 @@
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // mainControlsPanel
+            // panelMainControls
             // 
-            this.mainControlsPanel.Controls.Add(this.btnReceive);
-            this.mainControlsPanel.Controls.Add(this.btnSignOut);
-            this.mainControlsPanel.Controls.Add(this.btnStow);
-            this.mainControlsPanel.Controls.Add(this.btnPick);
-            this.mainControlsPanel.Controls.Add(this.btnPack);
-            this.mainControlsPanel.Controls.Add(this.btnShip);
-            this.mainControlsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainControlsPanel.Location = new System.Drawing.Point(0, 24);
-            this.mainControlsPanel.Name = "mainControlsPanel";
-            this.mainControlsPanel.Size = new System.Drawing.Size(866, 461);
-            this.mainControlsPanel.TabIndex = 7;
+            this.panelMainControls.BackColor = System.Drawing.Color.White;
+            this.panelMainControls.Controls.Add(this.btnReceive);
+            this.panelMainControls.Controls.Add(this.btnSignOut);
+            this.panelMainControls.Controls.Add(this.btnStow);
+            this.panelMainControls.Controls.Add(this.btnPick);
+            this.panelMainControls.Controls.Add(this.btnPack);
+            this.panelMainControls.Controls.Add(this.btnShip);
+            this.panelMainControls.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMainControls.Location = new System.Drawing.Point(0, 24);
+            this.panelMainControls.Name = "panelMainControls";
+            this.panelMainControls.Size = new System.Drawing.Size(866, 461);
+            this.panelMainControls.TabIndex = 7;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(866, 485);
-            this.Controls.Add(this.mainControlsPanel);
+            this.Controls.Add(this.panelMainControls);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.mainControlsPanel.ResumeLayout(false);
-            this.mainControlsPanel.PerformLayout();
+            this.panelMainControls.ResumeLayout(false);
+            this.panelMainControls.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,6 +206,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private MaterialSkin.Controls.MaterialFlatButton btnSignOut;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.Panel mainControlsPanel;
+        private System.Windows.Forms.Panel panelMainControls;
     }
 }
