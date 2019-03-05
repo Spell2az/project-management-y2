@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MaterialSkin;
 using MaterialSkin.Controls;
 
 namespace WarehouseApp
@@ -17,10 +9,7 @@ namespace WarehouseApp
         public ReceiveForm()
         {
             InitializeComponent();
-            //var materialSkinManager = MaterialSkinManager.Instance;
-            //materialSkinManager.AddFormToManage(this);
-            //materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            //materialSkinManager.ColorScheme = new ColorScheme(Primary.Indigo500, Primary.Indigo700, Primary.Indigo100, Accent.Pink200, TextShade.WHITE);
+            panelReceiveSideline.Visible = false;
         }
 
         protected override void OnClosed(EventArgs e)
@@ -28,6 +17,56 @@ namespace WarehouseApp
             base.OnClosed(e);
 
             MainForm.ShowPanel(this);
+        }
+
+        private void txtItemBarcode_Leave(object sender, EventArgs e)
+        {
+            if (txtItemBarcode.Text != String.Empty)
+            {
+                panelReceiveSideline.Visible = !IsItemRegistered(txtItemBarcode.Text);
+                lblSideline.Text = $"Sideline item {txtItemBarcode.Text}";
+            }
+           
+        }
+
+        private bool IsItemRegistered(string text)
+        {
+            return false;
+        }
+
+        private void btnCancelSideline_Click(object sender, EventArgs e)
+        {
+            panelReceiveSideline.Visible = false;
+        }
+
+        private void btnSideline_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(this, "Put item in the sideline area", "", MessageBoxButtons.OK) == DialogResult.OK)
+            {
+                ResetInputAndPanel();
+            }
+        }
+
+        private void ResetInputAndPanel()
+        {
+            panelReceiveSideline.Visible = false;
+            txtItemBarcode.Text = String.Empty;
+        }
+
+        private void btnReceive_Click(object sender, EventArgs e)
+        {
+            if (ReceiveItem(txtItemBarcode.Text, numItemQuantity.Value))
+            {
+                if (MessageBox.Show(this, $"Item {txtItemBarcode.Text} received, drop it to Ready to Stow area", "", MessageBoxButtons.OK) == DialogResult.OK)
+                {
+                    ResetInputAndPanel();
+                }
+            }
+        }
+
+        private bool ReceiveItem(string text, decimal value)
+        {
+            return true;
         }
     }
 }
