@@ -188,6 +188,7 @@
             this.IsMdiContainer = true;
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panelMainControls.ResumeLayout(false);

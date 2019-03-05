@@ -24,5 +24,19 @@ namespace WarehouseApp
 
             MainForm.ShowPanel(this);
         }
+
+        private void btnFinishShipping_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnDispatchItem_Click(object sender, EventArgs e)
+        {
+            if(txtItemBarcode.Text != string.Empty)
+            {
+                MessageBox.Show(this, "Item Dispatched", "", MessageBoxButtons.OK);
+            }
+            
+        }
     }
 }
