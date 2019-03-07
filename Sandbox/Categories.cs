@@ -1,4 +1,4 @@
-﻿namespace Utilities
+﻿namespace Inventory
 {
     public enum Categories : byte
     {

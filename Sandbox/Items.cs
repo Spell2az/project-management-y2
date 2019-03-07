@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
+using Sandbox;
 
 namespace Inventory
 {
@@ -15,7 +16,7 @@ namespace Inventory
         }
         public void LoadJson()
         {
-            using (StreamReader r = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + "data.json"))
+            using (StreamReader r = new StreamReader($"{AppDomain.CurrentDomain.BaseDirectory}{this.GetType().Name.ToLowerInvariant()}-data.json"))
             {
                 string json = r.ReadToEnd();
                 ItemList = JsonConvert.DeserializeObject<List<Item>>(json);
