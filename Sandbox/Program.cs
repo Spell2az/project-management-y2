@@ -12,7 +12,7 @@ namespace Sandbox
         static void Main(string[] args)
         {
            // var generator = new ItemGenerator();
-            var generator = new ReviewGenerator();
+            var generator = new EmployeeGenerator();
             Console.WriteLine(generator.GetJson());
             Console.ReadKey();
         }

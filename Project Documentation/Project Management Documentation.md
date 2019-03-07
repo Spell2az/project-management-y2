@@ -64,31 +64,31 @@
 
 - [x] Add Gulp
 - [x] Setup Sass with Bootstrap
-- [ ] Add Masterpages
+- [x] Add Masterpages
 - [ ] Add Test Project
-- [ ] Add Admin Portal
+- [x] Add Admin Portal
 - [ ] Add class library
 
 ##### Customer site pages
 
-- [ ] Home page
-- [ ] Register/Login page
-- [ ] Single item page
-- [ ] Categories page
-- [ ] Checkout page
-- [ ] Account page
-- [ ] Orders page
-- [ ] Single order page
-- [ ] Customer details page
+- [x] Home page
+- [x] Register/Login page
+- [x] Single item page
+- [x] Categories page
+- [x] Checkout page
+- [x] Account page
+- [x] Orders page
+- [x] Single order page
+- [x] Customer details page
 
 ##### Admin site pages
 
 - [ ] First time / Startup page
-- [ ] Login page
-- [ ] Items page
-- [ ] Single item page
+- [x] Login page
+- [x] Items page
+- [x] Single item page
 - [ ] Orders page
-- [ ] Review page
+- [x] Review page
 
 ## Event Tables
 

@@ -35,6 +35,36 @@ namespace Utilities
             
         }
 
+        public static DataTable GetEmployeeDataTable(IEnumerable<Employee> employees)
+        {
+            var dt = new DataTable();
+            dt.Columns.Add("FirstName");
+            dt.Columns.Add("LastName");
+            dt.Columns.Add("UserId");
+            dt.Columns.Add("Receive");
+            dt.Columns.Add("Stow");
+            dt.Columns.Add("Pick");
+            dt.Columns.Add("Pack");
+            dt.Columns.Add("Ship");
+
+            foreach (Employee employee in employees)
+            {
+                var row = dt.NewRow();
+
+                row["FirstName"] =employee.FirstName;
+                row["LastName"] = employee.LastName;
+                row["UserId"] = employee.UserId;
+                row["Receive"] = employee.Receive;
+                row["Stow"] = employee.Stow;
+                row["Pick"] = employee.Pick;
+                row["Pack"] = employee.Pack;
+                row["Ship"] = employee.Ship;
+                dt.Rows.Add(row);
+            }
+
+            return dt;
+
+        }
         public static DataTable GetBasketDataTable(IEnumerable<Item> items, Dictionary<int, int> basketContent)
         {
             var dt = new DataTable();

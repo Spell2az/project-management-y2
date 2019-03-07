@@ -12,7 +12,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CustomerSite", "CustomerSite\", "{7EF5AD38-5DAD-4527-8068-EA52797ABD46}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
-		ProjectReferences = ""
+		ProjectReferences = "{12213338-b7ba-49d6-837b-071910e0a769}|Sandbox.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_25378"
 		Debug.AspNetCompiler.PhysicalPath = "CustomerSite\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_25378\"

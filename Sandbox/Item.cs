@@ -1,4 +1,6 @@
-﻿namespace Utilities
+﻿using Inventory;
+
+namespace Sandbox
 {
     public class Item
     {
@@ -9,10 +11,6 @@
         public string Image { get; set; }
         public decimal Price { get; set; }
 
-        public override string ToString()
-        {
-            return $"{nameof(Id)}: {Id}, {nameof(Name)}: {Name}, {nameof(Category)}: {Category}, {nameof(Description)}: {Description}, {nameof(Image)}: {Image}, {nameof(Price)}: {Price}";
-        }
     }
-  
 }
+
