@@ -7,9 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AdminSite {
+namespace AdminSite.Admin {
     
     
-    public partial class Default1 {
+    public partial class AddItem {
     }
 }
