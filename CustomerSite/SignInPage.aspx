@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="SignInPage" Language="C#" MasterPageFile="~/SingUpSignIn.master" AutoEventWireup="true" CodeFile="SignInPage.aspx.cs" Inherits="Default2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="SignInSignUpPlacehodler" Runat="Server">
-  
     <div class="w-50 m-auto">
     <div class="form-group">
         <label for="MainContentPlaceholder_TextBox1">Email address</label>

@@ -2,6 +2,7 @@
 
 
 <asp:Content ContentPlaceHolderID="MainContentPlaceholder" runat="server">
+    <div class="container pt-5">
     <div class="row mt-5 pt-5">
         <div class="col-3">
             <div class="list-group">
@@ -24,8 +25,8 @@
             </asp:ContentPlaceHolder>
         </div>
     </div>
-
-            </asp:Content>
+    </div>
+</asp:Content>
    
 
 

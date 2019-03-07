@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="CategoryPage.aspx.cs" Inherits="Default2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceholder" Runat="Server">
-    <h1 class="my-4 "> <asp:Label ID="CategoryHeading" runat="server"></asp:Label></h1>
+    <div class="container pt-5">
+    <h1 class="my-4 text-center"> <asp:Label ID="CategoryHeading" runat="server"></asp:Label></h1>
     <div class="row">
         <asp:Repeater id="Repeater1" runat="server">
             <ItemTemplate>
@@ -15,6 +16,8 @@
                 </div>
             </ItemTemplate>
         </asp:Repeater>
+    </div>
+
     </div>
 </asp:Content>
 
