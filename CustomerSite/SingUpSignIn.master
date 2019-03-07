@@ -5,6 +5,7 @@
         <a class="<%:Page.Title=="SignInPage"?"nav-item nav-link active":"nav-item nav-link"%>" href="SignInPage.aspx">Sign In</a>
         <a class="<%:Page.Title=="SignUpPage"?"nav-item nav-link active":"nav-item nav-link"%>" href="SignUp.aspx">Sign Up</a>
     </nav>--%>
+    <div class="container pt-5">
     <ul class="nav nav-tabs nav-fill my-5">
         <li class="nav-item">
             <a class="<%:Page.Title=="SignInPage"?"nav-link active":"nav-link"%>" href="SignInPage.aspx">Sign In</a>
@@ -18,5 +19,5 @@
             </asp:ContentPlaceHolder>
      
   
-
+    </div>
 </asp:Content>

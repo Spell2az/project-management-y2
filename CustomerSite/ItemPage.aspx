@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ItemPage.aspx.cs" Inherits="Default2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceholder" Runat="Server">
-    
+    <div class="container pt-5">
     
     <div class="row mt-5">
         <div class="col-6">
@@ -45,6 +45,7 @@
                 <hr class="w-100" />
             </ItemTemplate>
         </asp:Repeater>
+    </div>
     </div>
 </asp:Content>
 

@@ -48,11 +48,12 @@
     </nav>
 </header>
     <form id="form1" runat="server">
-    <div class="container">
+    
         <asp:ContentPlaceHolder id="MainContentPlaceholder" runat="server">
         
         </asp:ContentPlaceHolder>
-    </div>
+    
+
 </form>
 <footer></footer>
 <script type="text/javascript" src="src/js/jquery.min.js"></script>
