@@ -28,7 +28,8 @@
                 <td><asp:CheckBox runat="server" Enabled="False" Checked='<%# Convert.ToBoolean(Eval("Pick")) %>'/></td>
                 <td><asp:CheckBox runat="server" Enabled="False" Checked='<%# Convert.ToBoolean(Eval("Pack")) %>'/></td>
                 <td><asp:CheckBox runat="server" Enabled="False" Checked='<%# Convert.ToBoolean(Eval("Ship")) %>'/></td>
-                <td><a class="btn btn-outline-info">Edit</a></td>
+                <td> <asp:HyperLink CssClass="btn btn-outline-info" NavigateUrl='<%#Eval("UserId", "./EditEmployee.aspx?userId={0}") %>' ID="HyperLink1" runat="server">Edit Details</asp:HyperLink></td>
+               
             </tr>
         </ItemTemplate>
         
