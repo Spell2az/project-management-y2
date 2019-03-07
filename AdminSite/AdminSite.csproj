@@ -66,10 +66,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\AddItem.aspx" />
+    <Content Include="Admin\AddLocation.aspx" />
     <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\EditEmployee.aspx" />
     <Content Include="Admin\EmployeesPage.aspx" />
     <Content Include="Admin\AddEmployee.aspx" />
     <Content Include="Admin\ItemsPage.aspx" />
+    <Content Include="Admin\LocationsPage.aspx" />
     <Content Include="Admin\ReviewsPage.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="gulpfile.js" />
@@ -1649,6 +1652,13 @@
     <Compile Include="Admin\AddItem.aspx.designer.cs">
       <DependentUpon>AddItem.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AddLocation.aspx.cs">
+      <DependentUpon>AddLocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddLocation.aspx.designer.cs">
+      <DependentUpon>AddLocation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AdminMaster.Master.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1662,6 +1672,13 @@
     </Compile>
     <Compile Include="Admin\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditEmployee.aspx.cs">
+      <DependentUpon>EditEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditEmployee.aspx.designer.cs">
+      <DependentUpon>EditEmployee.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\EmployeesPage.aspx.cs">
       <DependentUpon>EmployeesPage.aspx</DependentUpon>
@@ -1683,6 +1700,13 @@
     </Compile>
     <Compile Include="Admin\ItemsPage.aspx.designer.cs">
       <DependentUpon>ItemsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LocationsPage.aspx.cs">
+      <DependentUpon>LocationsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\LocationsPage.aspx.designer.cs">
+      <DependentUpon>LocationsPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ReviewsPage.aspx.cs">
       <DependentUpon>ReviewsPage.aspx</DependentUpon>
