@@ -1,7 +1,5 @@
-﻿<%@ Page Title="Default" Language="C#" MasterPageFile="MasterPage.master" %>
-
-
-<asp:content id="Content1" ContentPlaceHolderID="MainContentPlaceholder" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CustomerSite.Default" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceholder" runat="server">
     <div class="jumbotron jumbotron-fluid hero-background">
         <div class="container">
             <h1 class="display-4">Fluid jumbotron</h1>
@@ -10,4 +8,4 @@
     </div>
     <div class="container">
     </div>
-</asp:content>
+</asp:Content>

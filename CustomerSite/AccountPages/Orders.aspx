@@ -1,6 +1,5 @@
-﻿<%@ Page Title="Orders" Language="C#" MasterPageFile="~/AccountPages/AccountMaster.master" %>
-
-<asp:content id="OrdersContent" ContentPlaceHolderID="AccountPagePlaceholder" runat="server">
+﻿<%@ Page Title="Orders" Language="C#" MasterPageFile="~/AccountPages/AccountMaster.master" AutoEventWireup="true" CodeBehind="Orders.aspx.cs" Inherits="CustomerSite.AccountPages.Orders" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="AccountPagePlaceholder" runat="server">
     <h1>Orders</h1>
     
     <div class="card  mb-4">
@@ -100,4 +99,4 @@
 
         </ItemTemplate>
     </asp:Repeater>
-</asp:content>
+    </asp:Content>

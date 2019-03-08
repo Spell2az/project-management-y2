@@ -5,10 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class AccountPages_AddAddress : System.Web.UI.Page
+namespace CustomerSite.AccountPages
 {
-    protected void Page_Load(object sender, EventArgs e)
+    public partial class AddAddress : System.Web.UI.Page
     {
+        protected void Page_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

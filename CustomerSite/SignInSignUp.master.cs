@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace CustomerSite.AccountPages
+namespace CustomerSite
 {
-    public partial class AccountMaster : System.Web.UI.MasterPage
+    public partial class SignInSignUp : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

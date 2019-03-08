@@ -1,7 +1,5 @@
-﻿<%@ Page Title="SignUpPage" Language="C#" MasterPageFile="~/SingUpSignIn.master" AutoEventWireup="true" CodeFile="SignUpPage.aspx.cs" Inherits="Default2" %>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="SignInSignUpPlacehodler" Runat="Server">
-   
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SignInSignUp.master" AutoEventWireup="true" CodeBehind="SignUpPage.aspx.cs" Inherits="CustomerSite.SignUpPage" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="SignInSignUpPlacehodler" runat="server">
     <div class="w-50 m-auto">
         <div class="form-group">
             <label for="MainContentPlaceholder_TextBox1">First Name</label>
@@ -31,5 +29,4 @@
    
         <button type="submit" class="btn btn-primary">Sign Up</button>
     </div>
-</asp:Content>
-
+    </asp:Content>

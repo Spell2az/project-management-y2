@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace CustomerSite.AccountPages
 {
-    public partial class AccountMaster : System.Web.UI.MasterPage
+    public partial class LoginAndSecurity : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

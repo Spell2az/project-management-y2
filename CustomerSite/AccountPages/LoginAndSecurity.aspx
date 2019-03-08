@@ -1,6 +1,5 @@
-﻿<%@ Page Title="Login and Security" Language="C#" MasterPageFile="~/AccountPages/AccountMaster.master" %>
-
-<asp:content id="PersonalInfoContent" ContentPlaceHolderID="AccountPagePlaceholder" runat="server">
+﻿<%@ Page Title="Login and Security" Language="C#" MasterPageFile="~/AccountPages/AccountMaster.master" AutoEventWireup="true" CodeBehind="LoginAndSecurity.aspx.cs" Inherits="CustomerSite.AccountPages.LoginAndSecurity" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="AccountPagePlaceholder" runat="server">
     <h2 class="mb-5 w-100 text-center">Login and Security</h2>
     <div class="d-flex">
         <div class="flex-grow-1">
@@ -41,5 +40,4 @@
             <button class="btn w-50 d-block btn-primary">Edit</button>
         </div>
     </div>
-  
-</asp:content>
+    </asp:Content>

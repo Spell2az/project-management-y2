@@ -1,6 +1,5 @@
-﻿<%@ Page Title="Your Addresses" Language="C#" MasterPageFile="~/AccountPages/AccountMaster.master" AutoEventWireup="true" CodeFile="YourAddresses.aspx.cs" Inherits="AccountPages_YourAddresses" %>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="AccountPagePlaceholder" Runat="Server">
+﻿<%@ Page Title="Your Addresses" Language="C#" MasterPageFile="~/AccountPages/AccountMaster.master" AutoEventWireup="true" CodeBehind="YourAddresses.aspx.cs" Inherits="CustomerSite.AccountPages.YourAddresses" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="AccountPagePlaceholder" runat="server">
     Your Addresses
     <div class="row">
         <div class="col-6">
@@ -26,5 +25,4 @@
             </div>
         </div>
     </div>
-</asp:Content>
-
+    </asp:Content>

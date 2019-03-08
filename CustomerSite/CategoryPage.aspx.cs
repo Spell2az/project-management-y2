@@ -9,29 +9,31 @@ using Inventory;
 using Sandbox;
 using Utilities;
 
-public partial class Default2 : System.Web.UI.Page
+namespace CustomerSite
 {
-    private string category;
-    private DataTable dt;
-    protected void Page_Load(object sender, EventArgs e)
+    public partial class CategoryPage : System.Web.UI.Page
     {
-        category = Request.QueryString["category"];
-        CategoryHeading.Text = category;
+        private string category;
+        private DataTable dt;
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            category = Request.QueryString["category"];
+            CategoryHeading.Text = category;
 
-        var items = GetItems();
-        Session["Items"] = items;
-        var categoryItems = items.Where(i => i.Category == (Categories)Enum.Parse(typeof(Categories), category)).ToList();
-        dt = DataTableUtils.GetItemDataTable(categoryItems);
-        Repeater1.DataSource =
-            dt.AsEnumerable().Where(r => r.Field<string>("Category").Equals(category)).CopyToDataTable();
-        Repeater1.DataBind();
+            var items = GetItems();
+            Session["Items"] = items;
+            var categoryItems = items.Where(i => i.Category == (Categories)Enum.Parse(typeof(Categories), category)).ToList();
+            dt = DataTableUtils.GetItemDataTable(categoryItems);
+            Repeater1.DataSource =
+                dt.AsEnumerable().Where(r => r.Field<string>("Category").Equals(category)).CopyToDataTable();
+            Repeater1.DataBind();
+        }
+
+        private List<Item> GetItems()
+        {
+            var items = new Items();
+            return items.ItemList;
+
+        }
     }
-
-    private List<Item> GetItems()
-    {
-        var items = new Items();
-        return items.ItemList;
-
-    }
-   
 }

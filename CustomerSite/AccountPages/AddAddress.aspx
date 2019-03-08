@@ -1,6 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AccountPages/AccountMaster.master" AutoEventWireup="true" CodeFile="AddAddress.aspx.cs" Inherits="AccountPages_AddAddress" %>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="AccountPagePlaceholder" Runat="Server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AccountPages/AccountMaster.master" AutoEventWireup="true" CodeBehind="AddAddress.aspx.cs" Inherits="CustomerSite.AccountPages.AddAddress" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="AccountPagePlaceholder" runat="server">
     <div class="form-group row">
         <label for="fullName" class="col-2 col-form-label">Full name</label> 
         <div class="col-10">
@@ -36,5 +35,4 @@
             <a href="YourAddresses.aspx" class="btn btn-primary">Add Address</a>
         </div>
     </div>
-</asp:Content>
-
+    </asp:Content>

@@ -1,5 +1,4 @@
-﻿<%@ Page Title="Payment Information" Language="C#" MasterPageFile="~/AccountPages/AccountMaster.master" %>
-
-<asp:Content id="PaymentInfoContent" ContentPlaceHolderID="AccountPagePlaceholder" runat="server">
-    <h1>Payment Info</h1>
-</asp:Content>
+﻿<%@ Page Title="Payment Information" Language="C#" MasterPageFile="~/AccountPages/AccountMaster.master" AutoEventWireup="true" CodeBehind="PaymentInfo.aspx.cs" Inherits="CustomerSite.AccountPages.PaymentInfo" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="AccountPagePlaceholder" runat="server">
+    Payments
+    </asp:Content>
