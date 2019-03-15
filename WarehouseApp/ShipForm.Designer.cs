@@ -76,9 +76,10 @@
             this.materialLabel1.Location = new System.Drawing.Point(96, 174);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(134, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(139, 19);
             this.materialLabel1.TabIndex = 12;
-            this.materialLabel1.Text = "Scan Item barcode";
+            this.materialLabel1.Text = "Scan Shipping label";
+            this.materialLabel1.Click += new System.EventHandler(this.materialLabel1_Click);
             // 
             // btnFinishShipping
             // 
@@ -90,9 +91,9 @@
             this.btnFinishShipping.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnFinishShipping.Name = "btnFinishShipping";
             this.btnFinishShipping.Primary = true;
-            this.btnFinishShipping.Size = new System.Drawing.Size(121, 36);
+            this.btnFinishShipping.Size = new System.Drawing.Size(185, 36);
             this.btnFinishShipping.TabIndex = 15;
-            this.btnFinishShipping.Text = "Finish Picking";
+            this.btnFinishShipping.Text = "Finish Shipping orders";
             this.btnFinishShipping.UseVisualStyleBackColor = true;
             this.btnFinishShipping.Click += new System.EventHandler(this.btnFinishShipping_Click);
             // 

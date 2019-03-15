@@ -41,7 +41,7 @@ namespace WarehouseApp
 
         private void btnSignOut_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Restart();
         }
 
        
