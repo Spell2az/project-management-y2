@@ -83,12 +83,15 @@
 
 ##### Admin site pages
 
-- [ ] First time / Startup page
 - [x] Login page
 - [x] Items page
 - [x] Single item page
 - [ ] Orders page
 - [x] Review page
+
+## Specification of a system component
+
+System component chosen is OrderService which is responsible for creating and fetching orders, this component will be created using Unit of Work and repository design patterns. OrderService uses number of repositories (which abstract database access) to manage in memory collection of objects and any changes written do database together as one unit, hence the name unit of work. Either all operations succeed or fail. Repositories will be implemented with their corresponding interfaces for repository specific operations together with inheriting from generic repository class which contains generic methods for common operations on the generic type. Generic type will be replaced by concrete type -entity, when inheriting from generic repository class. This will help with reusability as there will no longer be need to create separate collection class for each type together with stored procedures which are very similar for common operations such as select, create, update, delete.
 
 ## Event Tables
 
@@ -423,7 +426,7 @@
 
 ### Employee Use Case Descriptions
 
-#### Employee - Sign In 
+#### Employee - Sign In
 
 | Use Case Name        |                       |
 | -------------------- | --------------------- |
