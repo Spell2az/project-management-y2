@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerSite", "CustomerSit
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ClientApplications", "ClientApplications", "{BD6FDECC-F54B-438D-A106-959B19A675F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementApp", "ManagementApp\ManagementApp.csproj", "{173CAED5-9946-4861-8C96-0CAC61AC8A56}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EshopManagementApp", "ManagementApp\EshopManagementApp.csproj", "{173CAED5-9946-4861-8C96-0CAC61AC8A56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
