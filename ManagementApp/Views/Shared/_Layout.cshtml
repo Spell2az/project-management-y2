@@ -18,63 +18,40 @@
 </head>
 <body id="page-top">
 
-<!-- Page Wrapper -->
-<div id="wrapper">
+  <!-- Page Wrapper -->
+  <div id="wrapper">
     @Html.Partial("Partials/_PageNavigation")
     <!-- Begin Page Content -->
     <div class="container-fluid">
-            @RenderBody()
-            
-            </div>
-            <!-- /.container-fluid -->
+      @RenderBody()
 
-        </div>
-        <!-- End of Main Content -->
-        <hr/>
-        <!-- Footer -->
-        <footer class="sticky-footer bg-white">
-            <div class="container my-auto">
-                <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Your Website 2019</span>
-                </div>
-            </div>
-        </footer>
-        <!-- End of Footer -->
+
+      <!-- /.container-fluid -->
+
     </div>
-
-</div>
-<!-- End of Page Wrapper -->
-
-<!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-</a>
-
-@*<div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
+    <!-- End of Main Content -->
+    <hr />
+    <!-- Footer -->
+    <footer class="sticky-footer bg-white">
+      <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+          <span>Copyright &copy; Your Website 2019</span>
         </div>
-    </div>*@
+      </div>
+    </footer>
+    <!-- End of Footer -->
+ </div>
 
+  <!-- End of Page Wrapper -->
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
 
-@Scripts.Render("~/bundles/jquery")
-@Scripts.Render("~/bundles/bootstrap")
-@Scripts.Render("~/bundles/datatables")
-@Scripts.Render("~/bundles/chart.js")
-@RenderSection("scripts", required: false)
+  @Scripts.Render("~/bundles/jquery")
+  @Scripts.Render("~/bundles/bootstrap")
+  @Scripts.Render("~/bundles/datatables")
+  @Scripts.Render("~/bundles/chart.js")
+  @RenderSection("scripts", required: false)
 </body>
 </html>
