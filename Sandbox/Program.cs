@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DomainClassLibrary.ApplicationsServices;
+using Microsoft.Win32;
 using Utilities;
 
 namespace Sandbox
@@ -12,9 +14,11 @@ namespace Sandbox
         static void Main(string[] args)
         {
            // var generator = new ItemGenerator();
-            var generator = new EmployeeGenerator();
-            Console.WriteLine(generator.GetJson());
+
+
+            Console.WriteLine(UserService.HashPassword("Pass@word1"));
             Console.ReadKey();
+
         }
     }
 }
