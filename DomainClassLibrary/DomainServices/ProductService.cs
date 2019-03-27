@@ -20,5 +20,11 @@ namespace DomainClassLibrary.DomainServices
       return await context.Products.ToListAsync();
     }
 
+    public async void AddProduct(Product product)
+    {
+      context.Products.Add(product);
+      await context.SaveChangesAsync();
+    }
+
   }
 }

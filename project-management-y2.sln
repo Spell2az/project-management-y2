@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EshopManagementApp", "Manag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainClassLibrary", "DomainClassLibrary\DomainClassLibrary.csproj", "{EA32C28C-22F8-4E39-BBBB-9B6FFDF7E654}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PrototypesWebForms", "PrototypesWebForms", "{8370D46A-CAFC-4C9D-BAA0-ED26077D915E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,7 +54,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{58377DD8-9F26-48FE-B7F2-D243F9300D98} = {8370D46A-CAFC-4C9D-BAA0-ED26077D915E}
 		{74C0AE86-43AE-4293-A66E-B475828E462A} = {BD6FDECC-F54B-438D-A106-959B19A675F1}
+		{9010670F-BE93-430D-B8F5-66167DFBF45C} = {8370D46A-CAFC-4C9D-BAA0-ED26077D915E}
 		{173CAED5-9946-4861-8C96-0CAC61AC8A56} = {BD6FDECC-F54B-438D-A106-959B19A675F1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

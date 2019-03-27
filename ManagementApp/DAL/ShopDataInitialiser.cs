@@ -17,7 +17,8 @@ namespace ManagementApp.DAL
             {
                 Id = 1,
                 Email = "admin@gmail.com",
-                Role = "Administrator",
+              Name = "Felix Admin1",
+              Role = "Administrator",
                 HashedPassword = "mUwH3oGd0JzL0UVLJ5qPA0YnUol3LMCDi6CcO5Wa7Qg=",
             });
 
@@ -31,24 +32,27 @@ namespace ManagementApp.DAL
             {
               Id = 2,
               Email = "emp1@gmail.com",
+              Name = "Jacky Emp1",
               Role = "Employee",
               HashedPassword = "6adb3afe399f8b04fc266dcaa2fbd611b0b0c635101bf3bedd80ef063ee0498a",
             },
             new User(){
             Id = 3,
             Email = "emp2@gmail.com",
+            Name = "Johny Emp2",
             Role = "Employee",
             HashedPassword = "0ff8f62308e67144e03ff3e032932ff89eea93ce51cb46ac85422dbb5b1db7dd",
           },
             new User(){
             Id = 4,
             Email = "emp3@gmail.com",
+            Name = "Oscar Emp3",
             Role = "Employee",
             HashedPassword = "d0b2a89e40303b29c704617035c22a9d4c4454d5cf1b4f3a7f71a88c1c8a91f9",
           }
           });
 
-
+         // context.SaveChanges();
 
       #region Employee info
       context.EmployeeInfos.AddRange(new EmployeeInfo[]

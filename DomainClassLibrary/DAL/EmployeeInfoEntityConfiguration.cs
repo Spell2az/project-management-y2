@@ -12,7 +12,7 @@ namespace DomainClassLibrary.DAL
   {
     public EmployeeInfoEntityConfiguration()
     {
-     
+      HasKey(e => e.Id);
 
     }
   }

@@ -12,6 +12,9 @@ namespace ManagementApp.DAL
 
       HasKey<int>(u => u.Id);
 
+      HasOptional(t => t.EmployeeInfo)
+        .WithRequired(e => e.User);
+
       Property(u => u.Name)
         .HasColumnName("Name")
         .IsRequired()

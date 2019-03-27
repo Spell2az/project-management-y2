@@ -1,8 +1,90 @@
-﻿@model dynamic
+﻿@model ManagementApp.Models.EmployeeViewModel
 
-@{
-  ViewBag.Title = "title";
-  Layout = "_Layout";
-}
+  @{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout.cshtml"; ;
+  }
 
-<h2>title</h2>
+  <h2>title</h2>
+
+  
+<section class="p-5" id="loginForm">
+  <div class="text-center">
+    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+  </div>
+  @using (Html.BeginForm( "Edit", "Employee", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "user", role = "form" }))
+  {
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    
+    <div class="form-group row  justify-content-center mt-5">
+      @Html.LabelFor(m => m.Id, new { @class = "col-2 col-form-label" })
+      <div class="col-4">
+        @Html.TextBoxFor(m => m.Id, new {@class = "form-control form-control-user", @disabled = "disabled"})
+      </div>
+    </div>
+
+    <div class="form-group row  justify-content-center mt-5">
+      @Html.LabelFor(m => m.Name, new { @class = "col-2 col-form-label" })
+      <div class="col-4">
+        @Html.TextBoxFor(m => m.Name, new {@class = "form-control form-control-user"})
+      </div>
+    </div>
+  
+    <div class="form-group row  justify-content-center mt-5">
+      @Html.LabelFor(m => m.Email, new { @class = "col-2 col-form-label" })
+      <div class="col-4">
+        @Html.TextBoxFor(m => m.Email, new {@class = "form-control form-control-user"})
+      </div>
+    </div>
+
+    <div class="form-group row  justify-content-center">
+      <label class="col-2 col-form-label">Tasks</label>
+      <div class="col-4">
+        
+        <div class="custom-controls-stacked">
+          <div class="custom-control custom-checkbox">
+            @Html.LabelFor(m => m.Receive, new {@class = "custom-control-label" })
+            @Html.CheckBoxFor(m => m.Receive, new {@class = "custom-control-input" })
+          </div>
+        </div>
+        
+        <div class="custom-controls-stacked">
+          <div class="custom-control custom-checkbox">
+            @Html.LabelFor(m => m.Stow, new {@class = "custom-control-label" })
+            @Html.CheckBoxFor(m => m.Stow, new {@class = "custom-control-input" })
+          </div>
+        </div>
+        
+        <div class="custom-controls-stacked">
+          <div class="custom-control custom-checkbox">
+            @Html.LabelFor(m => m.Pick, new {@class = "custom-control-label" })
+            @Html.CheckBoxFor(m => m.Pick, new {@class = "custom-control-input" })
+          </div>
+        </div>
+        
+        <div class="custom-controls-stacked">
+          <div class="custom-control custom-checkbox">
+            @Html.LabelFor(m => m.Pack, new {@class = "custom-control-label" })
+            @Html.CheckBoxFor(m => m.Pack, new {@class = "custom-control-input" })
+          </div>
+        </div>
+        
+        <div class="custom-controls-stacked">
+          <div class="custom-control custom-checkbox">
+            @Html.LabelFor(m => m.Ship, new {@class = "custom-control-label" })
+            @Html.CheckBoxFor(m => m.Ship, new {@class = "custom-control-input" })
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Update" class="btn btn-primary btn-user btn-block"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+</section>

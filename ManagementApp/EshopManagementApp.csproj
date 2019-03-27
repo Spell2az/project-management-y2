@@ -166,14 +166,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Models\EmployeeViewModel.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="DAL\ShopDataInitialiser.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201903270535521_Initial.cs" />
-    <Compile Include="Migrations\201903270535521_Initial.Designer.cs">
-      <DependentUpon>201903270535521_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201903271955524_AddEmployeeInfoAndName.cs" />
+    <Compile Include="Migrations\201903271955524_AddEmployeeInfoAndName.Designer.cs">
+      <DependentUpon>201903271955524_AddEmployeeInfoAndName.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -1980,7 +1981,11 @@
     <Content Include="Views\Employee\Index.cshtml" />
     <Content Include="Views\Employee\Edit.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201903271955524_AddEmployeeInfoAndName.resx">
+      <DependentUpon>201903271955524_AddEmployeeInfoAndName.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
@@ -1997,11 +2002,6 @@
       <Project>{ea32c28c-22f8-4e39-bbbb-9b6ffdf7e654}</Project>
       <Name>DomainClassLibrary</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201903270535521_Initial.resx">
-      <DependentUpon>201903270535521_Initial.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

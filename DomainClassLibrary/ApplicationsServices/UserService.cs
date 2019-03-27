@@ -25,7 +25,13 @@ namespace DomainClassLibrary.ApplicationsServices
             var user = context.Users.FirstOrDefaultAsync(u => u.Email == email);
             return await user;
         }
-        public static string HashPassword(string password)
+
+      public async Task<User> GetUser(int id)
+      {
+        var user = await context.Users.FirstOrDefaultAsync(u => u.Id == id);
+        return user;
+      }
+    public static string HashPassword(string password)
         {
             if(string.IsNullOrEmpty(password) || string.IsNullOrWhiteSpace(password))
                 throw new ArgumentException("password");

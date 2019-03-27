@@ -10,7 +10,7 @@
 
 <table class="table">
   <tr>
-    <th>User Id</th>
+    <th>Employee Id</th>
     <th>Name</th>
     <th>Receive</th>
     <th>Stow</th>
@@ -21,14 +21,16 @@
   </tr>
   @foreach (var employee in Model.Employees)
   {
-    <tr>@employee.Id</tr>
-    <tr>@employee.Name</tr>
-    <tr>@Html.CheckBoxFor(_ => employee.EmployeeInfo.Receive, new {@enabled = false})</tr>
-    <tr>@Html.CheckBoxFor(_ => employee.EmployeeInfo.Stow)</tr>
-    <tr>@Html.CheckBoxFor(_ => employee.EmployeeInfo.Pick)</tr>
-    <tr>@Html.CheckBoxFor(_ => employee.EmployeeInfo.Pack)</tr>
-    <tr>@Html.CheckBoxFor(_ => employee.EmployeeInfo.Ship)</tr>
-    <tr>@Html.ActionLink("Edit", "Edit", "Employee", new{ id = employee.Id}, new { @class = "btn btn-dark" })</tr>
+  <tr>
+    <td>@employee.Id</td>
+    <td>@employee.Name</td>
+    <td>@Html.CheckBoxFor(_ => employee.EmployeeInfo.Receive, new { @disabled = "disabled" })</td>
+    <td>@Html.CheckBoxFor(_ => employee.EmployeeInfo.Stow, new { @disabled = "disabled" })</td>
+    <td>@Html.CheckBoxFor(_ => employee.EmployeeInfo.Pick, new { @disabled = "disabled" })</td>
+    <td>@Html.CheckBoxFor(_ => employee.EmployeeInfo.Pack, new { @disabled = "disabled" })</td>
+    <td>@Html.CheckBoxFor(_ => employee.EmployeeInfo.Ship, new { @disabled = "disabled" })</td>
+    <td>@Html.ActionLink("Edit", "Edit", "Employee", new { id = employee.Id }, new { @class = "btn btn-dark" })</td>
+  </tr>
   }
 
 </table>
