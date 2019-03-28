@@ -1983,6 +1983,7 @@
     <Content Include="Views\Employee\Edit.cshtml" />
     <Content Include="Views\Product\Index.cshtml" />
     <Content Include="Views\Product\Details.cshtml" />
+    <Content Include="Views\Product\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201903271955524_AddEmployeeInfoAndName.resx">
