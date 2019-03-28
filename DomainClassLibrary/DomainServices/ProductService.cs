@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Threading.Tasks;
 using DomainClassLibrary.Entities;
@@ -26,5 +27,15 @@ namespace DomainClassLibrary.DomainServices
       await context.SaveChangesAsync();
     }
 
+    public async void UpdateProduct(Product product)
+    {
+      context.Products.AddOrUpdate(product);
+      await context.SaveChangesAsync();
+    }
+
+    public async Task<Product> GetProduct(int id)
+    {
+      return await context.Products.FirstOrDefaultAsync(u => u.Id == id);
+    }
   }
 }

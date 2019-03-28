@@ -1,0 +1,31 @@
+﻿@model System.Collections.Generic.List<DomainClassLibrary.Entities.Product>
+
+@{
+  ViewBag.Title = "title";
+}
+
+<h2>Products</h2>
+
+<table class="table">
+  <tr>
+    <th>Product Id</th>
+    <th>Name</th>
+    <th>Category</th>
+    <th>Price</th>
+    <th>Image</th>
+    <th></th>
+  </tr>
+  @foreach (var product in Model)
+  {
+  <tr>
+    <td>@product.Id</td>
+    <td>@product.Name</td>
+    <td>@product.Category</td>
+    <td>@product.Price</td>
+    <td><img src="@product.Image"></td>
+
+    <td>@Html.ActionLink("Edit", "Details", "Product", new { id = product.Id }, new { @class = "btn btn-dark" })</td>
+  </tr>
+  }
+
+</table>
