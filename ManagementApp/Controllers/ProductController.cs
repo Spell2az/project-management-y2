@@ -4,27 +4,24 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using DomainClassLibrary.ApplicationsServices;
-using DomainClassLibrary.DomainServices;
-using ManagementApp.DAL;
-using AppContext = ManagementApp.DAL.AppContext;
+
 
 namespace ManagementApp.Controllers
 {
     public class ProductController : Controller
     {
         // GET: Product
-        public async Task<ActionResult> Index()
+        public ActionResult Index()
         {
-          var products = await new ProductService(new AppContext()).GetProducts();
-            return View(products);
+         
+            return View();
         }
 
         // GET: Product/Details/5
-        public async Task<ActionResult> Details(int id)
+        public ActionResult Details(int id)
         {
-          var product =  await new ProductService(new AppContext()).GetProduct(id);
-          return View(product);
+          
+          return View();
         }
 
         // GET: Product/Create
