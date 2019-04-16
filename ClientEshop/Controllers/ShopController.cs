@@ -21,5 +21,11 @@ namespace ClientEshop.Controllers
             var products = unitOfWork.Products.GetAll();
             return View(products);
         }
+
+        public ActionResult Details(int id)
+        {
+
+            return View();
+        }
     }
 }
