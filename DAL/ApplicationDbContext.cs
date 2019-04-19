@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ApplicationCore.Domain;
 using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.SqlServer.Server;
 
 namespace DAL
 {

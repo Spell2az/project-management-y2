@@ -3,23 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ApplicationCore.Services;
 using DAL;
 
 namespace ClientEshop.Controllers
 {
     public class ShopController : Controller
     {
-        private readonly ApplicationDbContext ctx;
-        public ShopController()
+        private readonly IProductService productService;
+       
+        public ShopController(IProductService productService)
         {
-            ctx = ApplicationDbContext.Create();
+            this.productService = productService ?? throw new ArgumentNullException("productService");
         }
         // GET: Shop
         public ActionResult Index()
         {
-            var unitOfWork = new UnitOfWork(ctx);
-            var products = unitOfWork.Products.GetAll();
+            var products = productService.GetProducts();
             return View(products);
         }
+
+        public ActionResult Details(int id)
+        {
+            var product = productService.GetProductById(id);
+            return View(product);
+        }
+
+
     }
 }

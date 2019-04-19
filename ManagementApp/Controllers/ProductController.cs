@@ -86,7 +86,7 @@ namespace ManagementApp.Controllers
             }
             catch
             {
-                return View();
+                return View( );
             }
         }
     }

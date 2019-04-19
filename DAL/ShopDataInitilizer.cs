@@ -1,10 +1,13 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ApplicationCore.Domain;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace DAL
 {
@@ -12,6 +15,41 @@ namespace DAL
     {
         protected override void Seed(ApplicationDbContext context)
         {
+            #region UserRoles
+
+            const string adminRoleName = "Admin";
+            const string userRoleName = "Client";
+            const string employeeRoleName = "Employee";
+
+            var roleStore = new RoleStore<IdentityRole>(context);
+            var roleManager = new RoleManager<IdentityRole>(roleStore);
+
+            var adminRole = new IdentityRole { Name = adminRoleName };
+            var userRole = new IdentityRole { Name = userRoleName };
+            var employeeRole = new IdentityRole { Name = employeeRoleName };
+
+            roleManager.Create(adminRole);
+            roleManager.Create(userRole);
+            roleManager.Create(employeeRole);
+
+
+            #endregion
+
+            var userStore = new UserStore<ApplicationUser>(context);
+            var userManager = new UserManager<ApplicationUser>(userStore);
+
+
+            var testUser = new ApplicationUser()
+            {
+                Id = Guid.NewGuid().ToString(),
+                UserName = "test@gmail.com",
+                Email = "test@gmail.com",
+            };
+
+            userManager.Create(testUser, "password");
+            userManager.AddToRole(testUser.Id, userRoleName);
+            
+
             #region Users - Admin
 
             //context.Users.Add(new User()
