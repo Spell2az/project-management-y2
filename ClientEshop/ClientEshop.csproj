@@ -388,10 +388,6 @@
       <Project>{f537e3ef-6099-4d42-b8fd-baf1e8777165}</Project>
       <Name>DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DomainClassLibrary\DomainClassLibrary.csproj">
-      <Project>{EA32C28C-22F8-4E39-BBBB-9B6FFDF7E654}</Project>
-      <Name>DomainClassLibrary</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201904090818469_Inital.resx">
