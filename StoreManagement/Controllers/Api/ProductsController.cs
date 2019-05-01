@@ -18,22 +18,21 @@ namespace StoreManagement.Controllers.Api
             this.productService = productService ?? throw new ArgumentNullException("productService");
         }
         // GET api/<controller>
-        public IEnumerable<Product> Get()
+        public IHttpActionResult Get()
         {
             var products = productService.GetProducts();
-            return products;
+            return Ok(products);
         }
 
         // GET api/<controller>/5
-        public Product GetProduct(int id)
+        public IHttpActionResult GetProduct(int id)
         {
             var product = productService.GetProductById(id);
 
             if (product == null)
-            {
-                throw new HttpResponseException(HttpStatusCode.NotFound);
-            }
-            return product;
+                return NotFound();
+
+            return Ok(product);
         }
 
         // POST api/<controller>
