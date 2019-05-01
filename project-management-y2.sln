@@ -18,12 +18,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{ED05FB
 		Config\ConnectionStrings.config = Config\ConnectionStrings.config
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{F45BA5C0-C7ED-46D7-B73E-6F021663201C}"
-	ProjectSection(SolutionItems) = preProject
-		Data\solution-db.mdf = Data\solution-db.mdf
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreManagement", "StoreManagement\StoreManagement.csproj", "{F88D7B10-01ED-4A4F-9303-3A07B52185A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{A0949BF7-96CB-43DA-8D95-4203718A0C55}"
+	ProjectSection(SolutionItems) = preProject
+		Data\.keep = Data\.keep
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
