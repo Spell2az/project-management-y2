@@ -4,26 +4,50 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using ApplicationCore.Domain;
+using ApplicationCore.Services;
 
 namespace StoreManagement.Controllers.Api
 {
     public class ProductsController : ApiController
     {
-        // GET api/<controller>
-        public IEnumerable<string> Get()
+        private readonly IProductService productService;
+
+        public ProductsController(IProductService productService)
         {
-            return new string[] { "value1", "value2" };
+            this.productService = productService ?? throw new ArgumentNullException("productService");
+        }
+        // GET api/<controller>
+        public IEnumerable<Product> Get()
+        {
+            var products = productService.GetProducts();
+            return products;
         }
 
         // GET api/<controller>/5
-        public string Get(int id)
+        public Product GetProduct(int id)
         {
-            return "value";
+            var product = productService.GetProductById(id);
+
+            if (product == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+            return product;
         }
 
         // POST api/<controller>
-        public void Post([FromBody]string value)
+        [HttpPost]
+        public Product CreateProduct(Product product)
         {
+            if (!ModelState.IsValid)
+            {
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
+            }
+
+            productService.CreateProduct(product);
+
+            return product;
         }
 
         // PUT api/<controller>/5
