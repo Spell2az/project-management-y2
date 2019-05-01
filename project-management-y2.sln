@@ -23,6 +23,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{A0949BF7-96CB-43DA-8D95-4203718A0C55}"
 	ProjectSection(SolutionItems) = preProject
 		Data\.keep = Data\.keep
+		Data\solution-db.mdf = Data\solution-db.mdf
+		Data\solution-db_log.ldf = Data\solution-db_log.ldf
 	EndProjectSection
 EndProject
 Global
