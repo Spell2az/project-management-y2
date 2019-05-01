@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace StoreManagement.App_Start
 {
@@ -11,7 +13,9 @@ namespace StoreManagement.App_Start
         public static void Register(HttpConfiguration config)
         {
             // TODO: Add any additional configuration code.
-
+            var settings = config.Formatters.JsonFormatter.SerializerSettings;
+            settings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            settings.Formatting = Formatting.Indented;
             // Web API routes
             config.MapHttpAttributeRoutes();
 
