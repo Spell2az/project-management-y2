@@ -29,5 +29,12 @@ namespace ApplicationCore.Services
         {
             return unitOfWork.Products.Find(p => p.Category == category);
         }
+
+        public Product CreateProduct(Product product)
+        {
+            unitOfWork.Products.Add(product);
+            unitOfWork.Complete();
+            return product;
+        }
     }
 }
