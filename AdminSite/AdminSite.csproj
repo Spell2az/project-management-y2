@@ -1647,77 +1647,66 @@
   <ItemGroup>
     <Compile Include="Admin\AddItem.aspx.cs">
       <DependentUpon>AddItem.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\AddItem.aspx.designer.cs">
       <DependentUpon>AddItem.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\AddLocation.aspx.cs">
       <DependentUpon>AddLocation.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\AddLocation.aspx.designer.cs">
       <DependentUpon>AddLocation.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\AdminMaster.Master.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\AdminMaster.Master.designer.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="Admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\EditEmployee.aspx.cs">
       <DependentUpon>EditEmployee.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\EditEmployee.aspx.designer.cs">
       <DependentUpon>EditEmployee.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\EmployeesPage.aspx.cs">
       <DependentUpon>EmployeesPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\EmployeesPage.aspx.designer.cs">
       <DependentUpon>EmployeesPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\AddEmployee.aspx.cs">
       <DependentUpon>AddEmployee.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\AddEmployee.aspx.designer.cs">
       <DependentUpon>AddEmployee.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ItemsPage.aspx.cs">
       <DependentUpon>ItemsPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\ItemsPage.aspx.designer.cs">
       <DependentUpon>ItemsPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\LocationsPage.aspx.cs">
       <DependentUpon>LocationsPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\LocationsPage.aspx.designer.cs">
       <DependentUpon>LocationsPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ReviewsPage.aspx.cs">
       <DependentUpon>ReviewsPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\ReviewsPage.aspx.designer.cs">
       <DependentUpon>ReviewsPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>

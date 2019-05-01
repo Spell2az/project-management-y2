@@ -1,0 +1,81 @@
+﻿@model ClientEshop.Models.IndexViewModel
+@{
+    ViewBag.Title = "Manage";
+}
+
+<h2>@ViewBag.Title.</h2>
+
+<p class="text-success">@ViewBag.StatusMessage</p>
+<div>
+    
+ 
+      <div class="row">
+        <ul class="col-3 nav nav-pills d-flex flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" role="button" href="#login-security-tab">Login & Security</a>
+          </li>
+          <li class="nav-item">
+            <a href="#orders-tab" data-toggle="tab" role="button" class="nav-link">Your Orders</a>
+          </li>
+          <li class="nav-item">
+            <a href="#addresses-tab" data-toggle="tab" role="button" class="nav-link">Your Addresses</a>
+          </li>
+          <li class="nav-item">
+            <a href="#payments-tab" data-toggle="tab" role="button" class="nav-link">Payment Options</a>
+          </li>
+        </ul>
+        <div class="col-9 tab-content">
+          <div id="login-security-tab" class="tab-pane fade show active">
+            <h4>Change your account settings</h4>
+            <hr />
+            <dl class="dl-horizontal">
+              <dt>Password:</dt>
+              <dd>
+                [
+                @if (Model.HasPassword)
+                {
+                  @Html.ActionLink("Change your password", "ChangePassword")
+                }
+                else
+                {
+                  @Html.ActionLink("Create", "SetPassword")
+                }
+                ]
+              </dd>
+            </dl>
+          </div>
+          <div id="orders-tab" class="tab-pane fade">orders</div>
+          <div id="addresses-tab" class="tab-pane fade">addressess</div>
+          <div id="payments-tab" class="tab-pane fade">payments</div>
+        </div>
+      </div>
+        @*
+            Phone Numbers can used as a second factor of verification in a two-factor authentication system.
+             
+             See <a href="https://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
+                for details on setting up this ASP.NET application to support two-factor authentication using SMS.
+             
+             Uncomment the following block after you have set up two-factor authentication
+        *@
+        @*  
+            <dt>Phone Number:</dt>
+            <dd>
+                @(Model.PhoneNumber ?? "None")
+                @if (Model.PhoneNumber != null)
+                {
+                    <br />
+                    <text>[&nbsp;&nbsp;@Html.ActionLink("Change", "AddPhoneNumber")&nbsp;&nbsp;]</text>
+                    using (Html.BeginForm("RemovePhoneNumber", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <text>[<input type="submit" value="Remove" class="btn-link" />]</text>
+                    }
+                }
+                else
+                {
+                    <text>[&nbsp;&nbsp;@Html.ActionLink("Add", "AddPhoneNumber")
+                }
+            </dd>
+        *@
+      
+</div>

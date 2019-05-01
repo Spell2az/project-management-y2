@@ -8,5 +8,6 @@ namespace ApplicationCore.Services
         IEnumerable<Product> GetProducts();
         Product GetProductById(int id);
         IEnumerable<Product> GetProductsByCategory(Categories category);
+        Product CreateProduct(Product product);
     }
 }
