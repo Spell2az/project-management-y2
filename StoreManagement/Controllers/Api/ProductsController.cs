@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using ApplicationCore.Domain;
 using ApplicationCore.Services;
+using StoreManagement.Models;
 
 namespace StoreManagement.Controllers.Api
 {
@@ -20,43 +21,18 @@ namespace StoreManagement.Controllers.Api
         // GET api/<controller>
         public IHttpActionResult Get()
         {
-            var products = productService.GetProducts();
+            var products = productService
+                .GetProducts()
+                .Select(p => new ProductViewModel
+            {
+                Id = p.Id,
+                Name = p.Name,
+                Category = p.Category.ToString(),
+                Price = p.Price,
+            });
+            
             return Ok(products);
         }
 
-        // GET api/<controller>/5
-        public IHttpActionResult GetProduct(int id)
-        {
-            var product = productService.GetProductById(id);
-
-            if (product == null)
-                return NotFound();
-
-            return Ok(product);
-        }
-
-        // POST api/<controller>
-        [HttpPost]
-        public Product CreateProduct(Product product)
-        {
-            if (!ModelState.IsValid)
-            {
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
-            }
-
-            productService.CreateProduct(product);
-
-            return product;
-        }
-
-        // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/<controller>/5
-        public void Delete(int id)
-        {
-        }
     }
 }
