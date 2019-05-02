@@ -16,11 +16,6 @@ namespace StoreManagement.Controllers
         {
             this.employeeService = employeeService ?? throw new ArgumentNullException("employeeService");
         }
-        // GET: Products
-        public ActionResult Index()
-        {
-            return View();
-        }
 
         // GET: Employees
         public ActionResult Index()

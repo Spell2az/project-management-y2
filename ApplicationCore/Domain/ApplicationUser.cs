@@ -14,5 +14,7 @@ namespace ApplicationCore.Domain
       // Add custom user claims here
       return userIdentity;
     }
+
+    public virtual EmployeeInfo EmployeeInfo { get; set; }
   }
 }
