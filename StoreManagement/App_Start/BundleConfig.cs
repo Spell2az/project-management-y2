@@ -11,9 +11,9 @@ namespace StoreManagement
             bundles.Add(new ScriptBundle("~/bundles/vendor").Include(
                         "~/Scripts/jquery-{version}.js",
                         "~/Scripts/bootstrap.js",
-                "~/Scripts/sb-admin-2.js",
-                "~/Scripts/datatables/jquery.datatables.js",
-            "~/Scripts/datables/datatables.bootstrap.js"));
+                         "~/Scripts/sb-admin-2.js",
+                         "~/Scripts/DataTables/jquery.dataTables.js",
+                        "~/Scripts/DataTables/dataTables.bootstrap4.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -28,7 +28,7 @@ namespace StoreManagement
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/fontawesome-all.css",
-                      "~/Content/datatables/css/datatablers.bootstrap4.css",
+                      "~/Content/dataTables/css/dataTables.bootstrap4.css",
                       "~/Content/site.css"));
         }
     }
