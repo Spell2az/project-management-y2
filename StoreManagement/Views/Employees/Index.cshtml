@@ -1,7 +1,106 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Employees";
 }
 
-<h2>Index</h2>
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary d-inline">@ViewBag.Title</h6>
+    <a href="@Url.Action("Create", "Employees")" class="btn btn-primary float-right">Add New Employee</a>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="employees" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>UserName</th>
+            <th>Receive</th>
+            <th>Stow</th>
+            <th>Pick</th>
+            <th>Pack</th>
+            <th>Ship</th>
+          </tr>
+        </thead>
+        <tfoot>
+        <tr>
+          <th>Id</th>
+          <th>UserName</th>
+          <th>Receive</th>
+          <th>Stow</th>
+          <th>Pick</th>
+          <th>Pack</th>
+          <th>Ship</th>
+        </tr>
+        </tfoot>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 
+@section scripts
+{
+  <script>
+    $(document).ready(function () {
+      const table = $("#employees").DataTable({
+        ajax: {
+          url: "/api/employees",
+          dataSrc: ""
+        },
+        columns: [
+          {
+            data: "id"
+          },
+          {
+            data: "userName",
+            render(data, type, employee) {
+              return `<a href="/employees/details/${employee.id}">${employee.userName}</a>`;
+            }
+          },
+          {
+            data: "receive",
+            render(data, type, employee) {
+              return getIconForPermissions(data);
+            }
+          },
+          {
+            data: "stow",
+            render(data, type, employee) {
+              return getIconForPermissions(data);
+            }
+          },
+          {
+            data: "pick",
+            render(data, type, employee) {
+              return getIconForPermissions(data);
+            }
+          },
+          {
+            data: "pack",
+            render(data, type, employee) {
+              return getIconForPermissions(data);
+            }
+          },
+          {
+            data: "ship",
+            render(data, type, employee) {
+              return getIconForPermissions(data);
+            }
+          }
+        ]
+      });
+    });
+
+
+    function getIconForPermissions(hasPermission) {
+
+      const checkIcon = `<i style="color: green;" class="fas fa-check"></i>`;
+      const timesIcon = `<i style="color: red;" class="fas fa-times"></i>`;
+      return hasPermission ? checkIcon : timesIcon;
+    }
+
+   
+  </script>
+}

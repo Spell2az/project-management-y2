@@ -1,0 +1,66 @@
+﻿@model StoreManagement.Dtos.EmployeeDto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EmployeeDto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Receive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Receive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stow)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stow)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pick)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pick)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pack)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pack)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ship)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ship)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
