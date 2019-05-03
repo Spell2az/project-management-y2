@@ -46,7 +46,7 @@ namespace DAL
                 Email = "test@gmail.com",
             };
 
-            userManager.Create(testUser, "password");
+            userManager.Create(testUser, "Pass@word1");
             userManager.AddToRole(testUser.Id, customerRoleName);
 
 
@@ -61,7 +61,7 @@ namespace DAL
 
             };
 
-            userManager.Create(admin, "password");
+            userManager.Create(admin, "Pass@word1");
             userManager.AddToRole(admin.Id, adminRoleName);
 
             #endregion
@@ -116,7 +116,7 @@ namespace DAL
                 }
             };
             #endregion
-           
+
             foreach (var n in Enumerable.Range(0, 5))
             {
                 var employee = new ApplicationUser()
@@ -127,9 +127,9 @@ namespace DAL
                     EmployeeInfo = EmployeeInfos[n]
                 };
 
-               
 
-                userManager.Create(employee, "password");
+
+                userManager.Create(employee, "Pass@word1");
                 userManager.AddToRole(employee.Id, employeeRoleName);
             }
 
@@ -206,6 +206,20 @@ namespace DAL
                });
             #endregion
 
+
+            #region WarehouseLocations
+
+            // 5 aisles with 10 locations each
+            var warehouseLocations = Enumerable.Range(1, 5)
+                .Select(a => Enumerable.Range(1, 10)
+                .Select(l =>
+                    new WarehouseLocation()
+                    {
+                        Id = $"A-0{a}0-{l.ToString().PadLeft(3, '0')}"
+                    }))
+                .SelectMany(x => x);
+            context.WarehouseLocations.AddRange(warehouseLocations);
+            #endregion
 
             base.Seed(context);
         }

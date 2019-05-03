@@ -34,5 +34,6 @@ namespace DAL
 
       public DbSet<Product> Products { get; set; }
       public DbSet<EmployeeInfo> EmployeeInfos { get; set; }
+      public DbSet<WarehouseLocation> WarehouseLocations { get; set; }
     }
 }

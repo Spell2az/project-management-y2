@@ -7,6 +7,7 @@ namespace ApplicationCore
   public interface IUnitOfWork : IDisposable
   {
       IProductRepository Products { get; }
+      IWarehouseLocationRepository WarehouseLocations { get; }
       int Complete();
     }
 }

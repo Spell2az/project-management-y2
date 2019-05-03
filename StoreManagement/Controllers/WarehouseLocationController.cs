@@ -6,14 +6,12 @@ using System.Web.Mvc;
 
 namespace StoreManagement.Controllers
 {
-    [Authorize(Roles = "Admin")]
-    public class HomeController : Controller
+    public class WarehouseLocationsController : Controller
     {
-
+        // GET: WarehouseLocation
         public ActionResult Index()
         {
             return View();
         }
-
     }
 }
