@@ -18,6 +18,7 @@ namespace StoreManagement
             // register all your components with the container here
             // it is NOT necessary to register your controllers
             container.RegisterType<IProductService, ProductService>();
+            container.RegisterType<ILocationService, LocationService>();
             container.RegisterType<IUnitOfWork, UnitOfWork>(new HierarchicalLifetimeManager());
             // e.g. container.RegisterType<ITestService, TestService>();
             DependencyResolver.SetResolver(new Unity.Mvc5.UnityDependencyResolver(container));

@@ -10,12 +10,18 @@ namespace DAL
 
         private readonly ApplicationDbContext context;
         private IProductRepository products;
+        private IWarehouseLocationRepository warehouseLocations;
 
         public IProductRepository Products
         {
             get {
                 return products ?? (products = new ProductRepository(context));
             }
+        }
+
+        public IWarehouseLocationRepository WarehouseLocations
+        {
+            get { return warehouseLocations ?? (warehouseLocations = new WarehouseLocationRepository(context));}
         }
 
         public UnitOfWork(ApplicationDbContext context)

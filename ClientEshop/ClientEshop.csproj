@@ -202,17 +202,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904090818469_Inital.cs" />
-    <Compile Include="Migrations\201904090818469_Inital.Designer.cs">
-      <DependentUpon>201904090818469_Inital.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904100550113_AddProducts.cs" />
-    <Compile Include="Migrations\201904100550113_AddProducts.Designer.cs">
-      <DependentUpon>201904100550113_AddProducts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201905021824432_AddEmployeeInfo.cs" />
-    <Compile Include="Migrations\201905021824432_AddEmployeeInfo.Designer.cs">
-      <DependentUpon>201905021824432_AddEmployeeInfo.cs</DependentUpon>
+    <Compile Include="Migrations\201905031603425_Initial.cs" />
+    <Compile Include="Migrations\201905031603425_Initial.Designer.cs">
+      <DependentUpon>201905031603425_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -314,8 +306,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -369,17 +359,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904090818469_Inital.resx">
-      <DependentUpon>201904090818469_Inital.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904100550113_AddProducts.resx">
-      <DependentUpon>201904100550113_AddProducts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905021824432_AddEmployeeInfo.resx">
-      <DependentUpon>201905021824432_AddEmployeeInfo.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
     <Content Include="webfonts\fa-solid-900.woff2" />
     <Content Include="webfonts\fa-solid-900.woff" />
@@ -398,6 +377,11 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201905031603425_Initial.resx">
+      <DependentUpon>201905031603425_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

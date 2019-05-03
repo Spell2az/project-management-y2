@@ -7,6 +7,7 @@ using ApplicationCore.Services;
 
 namespace StoreManagement.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class ProductsController : Controller
     {
 

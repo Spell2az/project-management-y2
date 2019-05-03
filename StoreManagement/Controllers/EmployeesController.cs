@@ -13,6 +13,7 @@ using StoreManagement.Models;
 
 namespace StoreManagement.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class EmployeesController : Controller
     {
 
@@ -69,22 +70,22 @@ namespace StoreManagement.Controllers
         [HttpPost]
         public ActionResult Edit(EmployeeDto employeeDto)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
+                var userManager = HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
+                var employee = userManager.FindById(employeeDto.Id);
 
+                employee.UserName = employeeDto.UserName;
+                employee.EmployeeInfo.Receive = employeeDto.Receive;
+                employee.EmployeeInfo.Stow = employeeDto.Stow;
+                employee.EmployeeInfo.Pick = employeeDto.Pick;
+                employee.EmployeeInfo.Pack = employeeDto.Pack;
+                employee.EmployeeInfo.Ship = employeeDto.Ship;
+
+                userManager.Update(employee);
             }
 
-            var userManager = HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            var employee = userManager.FindById(employeeDto.Id);
-
-            employee.UserName = employeeDto.UserName;
-            employee.EmployeeInfo.Receive = employeeDto.Receive;
-            employee.EmployeeInfo.Stow = employeeDto.Stow;
-            employee.EmployeeInfo.Pick = employeeDto.Pick;
-            employee.EmployeeInfo.Pack = employeeDto.Pack;
-            employee.EmployeeInfo.Ship = employeeDto.Ship;
-
-            userManager.Update(employee);
+           
 
             return RedirectToAction("Details", new { id = employeeDto.Id });
         }
