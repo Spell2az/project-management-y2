@@ -56,10 +56,10 @@ namespace StoreManagement
             manager.PasswordValidator = new PasswordValidator
             {
                 RequiredLength = 6,
-                RequireNonLetterOrDigit = true,
-                RequireDigit = true,
-                RequireLowercase = true,
-                RequireUppercase = true,
+                //RequireNonLetterOrDigit = true,
+                //RequireDigit = true,
+                //RequireLowercase = true,
+                //RequireUppercase = true,
             };
 
             // Configure user lockout defaults
@@ -106,6 +106,18 @@ namespace StoreManagement
         public static ApplicationSignInManager Create(IdentityFactoryOptions<ApplicationSignInManager> options, IOwinContext context)
         {
             return new ApplicationSignInManager(context.GetUserManager<ApplicationUserManager>(), context.Authentication);
+        }
+    }
+
+    public class ApplicationRoleManager : RoleManager<IdentityRole>
+    {
+        public ApplicationRoleManager(IRoleStore<IdentityRole, string> store) : base(store)
+        {
+        }
+        public static ApplicationRoleManager Create(IdentityFactoryOptions<ApplicationRoleManager> options, IOwinContext context)
+        {
+            var roleStore = new RoleStore<IdentityRole>(context.Get<ApplicationDbContext>());
+            return new ApplicationRoleManager(roleStore);
         }
     }
 }

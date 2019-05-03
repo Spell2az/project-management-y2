@@ -18,14 +18,14 @@ namespace DAL
             #region UserRoles
 
             const string adminRoleName = "Admin";
-            const string userRoleName = "Client";
+            const string customerRoleName = "Customer";
             const string employeeRoleName = "Employee";
 
             var roleStore = new RoleStore<IdentityRole>(context);
             var roleManager = new RoleManager<IdentityRole>(roleStore);
 
             var adminRole = new IdentityRole { Name = adminRoleName };
-            var userRole = new IdentityRole { Name = userRoleName };
+            var userRole = new IdentityRole { Name = customerRoleName };
             var employeeRole = new IdentityRole { Name = employeeRoleName };
 
             roleManager.Create(adminRole);
@@ -47,84 +47,93 @@ namespace DAL
             };
 
             userManager.Create(testUser, "password");
-            userManager.AddToRole(testUser.Id, userRoleName);
-            
+            userManager.AddToRole(testUser.Id, customerRoleName);
+
 
             #region Users - Admin
 
-            //context.Users.Add(new User()
-            //{
-            //    Id = 1,
-            //    Email = "admin@gmail.com",
-            //    Name = "Felix Admin1",
-            //    Role = "Administrator",
-            //    HashedPassword = "mUwH3oGd0JzL0UVLJ5qPA0YnUol3LMCDi6CcO5Wa7Qg=",
-            //});
+
+            var admin = new ApplicationUser()
+            {
+                Id = Guid.NewGuid().ToString(),
+                UserName = "admin@gmail.com",
+                Email = "amdin@gmail.com",
+
+            };
+
+            userManager.Create(admin, "password");
+            userManager.AddToRole(admin.Id, adminRoleName);
 
             #endregion
+
+
 
             #region Users - Employees
 
-            //  context.Users.AddRange(new User[]
-            //  {
-            //  new User()
-            //  {
-            //    Id = 2,
-            //    Email = "emp1@gmail.com",
-            //    Name = "Jacky Emp1",
-            //    Role = "Employee",
-            //    HashedPassword = "6adb3afe399f8b04fc266dcaa2fbd611b0b0c635101bf3bedd80ef063ee0498a",
-            //  },
-            //  new User(){
-            //  Id = 3,
-            //  Email = "emp2@gmail.com",
-            //  Name = "Johny Emp2",
-            //  Role = "Employee",
-            //  HashedPassword = "0ff8f62308e67144e03ff3e032932ff89eea93ce51cb46ac85422dbb5b1db7dd",
-            //},
-            //  new User(){
-            //  Id = 4,
-            //  Email = "emp3@gmail.com",
-            //  Name = "Oscar Emp3",
-            //  Role = "Employee",
-            //  HashedPassword = "d0b2a89e40303b29c704617035c22a9d4c4454d5cf1b4f3a7f71a88c1c8a91f9",
-            //}
-            //  });
-
-            //  // context.SaveChanges();
 
             #region Employee info
-            //  context.EmployeeInfos.AddRange(new EmployeeInfo[]
-            //      {
-            //  new EmployeeInfo()
-            //  {
-            //    Id = 2,
-            //    Receive = true,
-            //    Stow = true,
-            //    Pick = false,
-            //    Pack = false,
-            //    Ship = false,
-            //  },
-            //  new EmployeeInfo()
-            //  {
-            //    Id = 3,
-            //    Receive = false,
-            //    Stow = false,
-            //    Pick = false,
-            //    Pack = false,
-            //    Ship = true,
-            //  },
-            //  new EmployeeInfo()
-            //  {
-            //    Id = 4,
-            //    Receive = false,
-            //    Stow = false,
-            //    Pick = true,
-            //    Pack = false,
-            //    Ship = true,
-            //  },
-            //      });
+
+            var EmployeeInfos = new EmployeeInfo[] {
+                new EmployeeInfo()
+                {
+                    Receive = true,
+                    Stow = true,
+                    Pick = false,
+                    Pack = false,
+                    Ship = false,
+                },
+                new EmployeeInfo()
+                {
+                    Receive = false,
+                    Stow = false,
+                    Pick = false,
+                    Pack = false,
+                    Ship = true,
+                },
+                new EmployeeInfo()
+                {
+                    Receive = false,
+                    Stow = false,
+                    Pick = true,
+                    Pack = false,
+                    Ship = true,
+                },
+                new EmployeeInfo()
+                {
+                    Receive = false,
+                    Stow = false,
+                    Pick = true,
+                    Pack = false,
+                    Ship = true,
+                },
+                new EmployeeInfo()
+                {
+                    Receive = true,
+                    Stow = false,
+                    Pick = true,
+                    Pack = false,
+                    Ship = true,
+                }
+            };
             #endregion
+           
+            foreach (var n in Enumerable.Range(0, 5))
+            {
+                var employee = new ApplicationUser()
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    UserName = $"employee{n}@gmail.com",
+                    Email = $"employee{n}@gmail.com",
+                    EmployeeInfo = EmployeeInfos[n]
+                };
+
+               
+
+                userManager.Create(employee, "password");
+                userManager.AddToRole(employee.Id, employeeRoleName);
+            }
+
+
             #endregion
 
             #region Products
@@ -194,7 +203,7 @@ namespace DAL
           Image = "https://picsum.photos/100/100/?image=399",
           Price= 269.99m,
         },
-               }); 
+               });
             #endregion
 
 
